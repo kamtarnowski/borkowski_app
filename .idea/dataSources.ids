@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source source="LOCAL" name="Rails borkowski_app: development" uuid="1c6e67a6-b9b4-43a0-af25-b97b5bd38e80">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails borkowski_app: test" uuid="3587448d-fca1-4973-96fb-69043f16418a">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+  <data-source source="LOCAL" name="Rails borkowski_app: production" uuid="e142f9e7-df29-4457-8d8a-d07f95bea0b1">
+    <database-info product="" version="" jdbc-version="" driver-name="" driver-version=""/>
+  </data-source>
+</component>
