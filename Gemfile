@@ -9,11 +9,11 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
+gem 'haml'
 gem 'haml-rails'
 gem "gritter"
 gem 'friendly_id'
-gem 'responders'
-gem 'devise', :github => 'plataformatec/devise'
+gem 'meta-tags'
 gem 'activeadmin', github: 'gregbell/active_admin'
 
 
