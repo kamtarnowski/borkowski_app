@@ -3,7 +3,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.1.5'
 gem 'pg'
 gem 'sass-rails', '~> 4.0.3'
-gem 'bootstrap-sass', '~> 3.3.1'
+gem 'bootstrap-sass', :git => 'https://github.com/twbs/bootstrap-sass.git', :branch => 'next'
 gem 'autoprefixer-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.0.0'
@@ -15,6 +15,7 @@ gem "gritter"
 gem 'friendly_id'
 gem 'meta-tags'
 gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'owlcarousel-rails'
 
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder

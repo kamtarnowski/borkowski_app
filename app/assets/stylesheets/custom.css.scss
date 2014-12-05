@@ -1,0 +1,17 @@
+body {
+  background-image: url(subtle.png)
+}
+
+#logo {
+  padding-bottom: 8px;
+}
+
+.navbar-inverse {
+  background: -webkit-linear-gradient(#000000, #333333); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#000000, #333333); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#000000, #333333); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#000000, #646464); /* Standard syntax */
+  letter-spacing: 1px;
+  font-size: 1.2em;
+  border: 0px;
+}
