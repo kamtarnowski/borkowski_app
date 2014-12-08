@@ -46,15 +46,15 @@ ul.navbar-nav li {
   border-width: 3px;
   border-style: solid;
   -webkit-border-image:
-    -webkit-gradient(linear, 0 100%, 0 0, from(black), to(rgba(0, 0, 0, 0))) 1 100%;
+    -webkit-gradient(linear, 0 100%, 0 0, from(grey), to(rgba(0, 0, 0, 0))) 1 100%;
   -webkit-border-image:
-    -webkit-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+    -webkit-linear-gradient(bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
   -moz-border-image:
-    -moz-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+    -moz-linear-gradient(bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
   -o-border-image:
-    -o-linear-gradient(bottom, black, rgba(0, 0, 0, 0)) 1 100%;
+    -o-linear-gradient(bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
   border-image:
-    linear-gradient(to top, black, rgba(0, 0, 0, 0)) 1 100%;
+    linear-gradient(to top, grey, rgba(0, 0, 0, 0)) 1 100%;
 
   background-color: white;
   position: relative;
@@ -63,8 +63,10 @@ ul.navbar-nav li {
 
 #row1st {
   margin-top: 60px;
+  padding-right: 50px;
 }
 
 #back2nd {
+  margin-top: -50px;
   background-color: grey;
 }
