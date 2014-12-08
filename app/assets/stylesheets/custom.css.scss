@@ -17,10 +17,30 @@ body {
   border-radius: 0px;
   border-left: 0px;
   border-right: 0px;
+  box-shadow: 0px -5px 11px #888;
 }
 
 #owl-slide .item img{
   display: block;
   width: 100%;
   height: auto;
+}
+
+.owl-carousel {
+  z-index: 9999;
+}
+
+#back1st {
+  background-color: white;
+  box-shadow: 5px 5px 11px #888;
+  position: relative;
+  top: -80px;
+}
+
+#row1st {
+  margin-top: 120px;
+}
+
+#back2nd {
+  background-color: grey;
 }
