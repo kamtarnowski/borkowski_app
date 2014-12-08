@@ -13,5 +13,14 @@ body {
   background: linear-gradient(#000000, #646464); /* Standard syntax */
   letter-spacing: 1px;
   font-size: 1.2em;
-  border: 0px;
+  margin-bottom: 0px;
+  border-radius: 0px;
+  border-left: 0px;
+  border-right: 0px;
+}
+
+#owl-demo .item img{
+  display: block;
+  width: 100%;
+  height: auto;
 }
