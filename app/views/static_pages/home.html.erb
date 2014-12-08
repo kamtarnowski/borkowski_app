@@ -1,16 +1,4 @@
 <% provide(:title, 'Home') %>
-<script>
-    $(document).ready(function(){
-        $(".owl-carousel").owlCarousel({
-
-            autoPlay: 5000,
-            navigation : true,
-            slideSpeed : 300,
-            paginationSpeed : 400,
-            singleItem: true,
-        });
-    });
-</script>
 
 <div id="owl-slide" class="owl-carousel owl-theme">
   <div class="item"><img src="assets/lion_27-wallpaper-1366x768.jpg" alt="Owl Image"></div>
@@ -36,3 +24,19 @@
 <div class="container" id="back2nd">
   KAMIL TARNOWSKI
 </div>
+
+
+
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+
+            autoPlay: 5000,
+            navigation : false,
+            slideSpeed : 300,
+            paginationSpeed : 400,
+            singleItem: true,
+            stopOnHover: true,
+        });
+    });
+</script>
