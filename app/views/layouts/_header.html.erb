@@ -1,40 +1,44 @@
-<div class='container' id="back_logo">
-  <div class="row" id="logo">
-    <div class="col-md-6">
-      <%= link_to image_tag('cinqueterre.jpg', alt: 'Logo',
-                            style: 'width:30%; high:30px; border-radius:4px' ), root_path %>
-    </div>
-  </div>
-</div>
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="./">Borkowski Wylewki</a>
-    </div>
-    <div class="collapse navbar-collapse" id="Navbar">
-        <ul class="nav navbar-nav">
-          <li><%= link_to "Start", root_path %></li>
-          <li class="dropdown">
-          <li><a class='dropdown-toggle' data-toggle="dropdown" href="#">Wykorzystywane metody
-            <span class="caret"></span></a>
-            <ul class="dropdown-menu">
-              <li><a href="#">Metoda Pierwsza</a> </li>
-              <li><a href="#">Metoda Druga</a> </li>
-              <li><a href="#">Metoda Trzecia</a> </li>
-            </ul>
-          </li>
-          <li><a href="#">Realizacje</a></li>
-          <li><a href="#">Kontakt</a></li>
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
-        </ul>
+<header>
+
+    <div class='container' id="back_logo">
+      <div class="row" id="logo">
+        <div class="col-md-6">
+          <%= link_to image_tag('cinqueterre.jpg', alt: 'Logo',
+                                style: 'width:30%; high:30px; border-radius:4px' ), root_path %>
+        </div>
       </div>
     </div>
-</nav>
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+          <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="./">Borkowski Wylewki</a>
+        </div>
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav">
+              <li><%= link_to "Start", root_path %></li>
+              <li class="dropdown">
+              <li><a class='dropdown-toggle' data-toggle="dropdown" href="#">Wykorzystywane metody
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Metoda Pierwsza</a> </li>
+                  <li><a href="#">Metoda Druga</a> </li>
+                  <li><a href="#">Metoda Trzecia</a> </li>
+                </ul>
+              </li>
+              <li><a href="#">Realizacje</a></li>
+              <li><a href="#">Kontakt</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+
+</header>

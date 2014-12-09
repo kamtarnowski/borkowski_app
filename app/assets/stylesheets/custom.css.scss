@@ -109,4 +109,10 @@ ul.navbar-nav li {
   margin-top: -50px;
   background-color: grey;
   border-radius: 0 0 5px 5px;
+
+  background: -webkit-linear-gradient(grey, #000000); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(grey, #000000); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(grey, #000000); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(grey, #000000); /* Standard syntax */
+
 }
