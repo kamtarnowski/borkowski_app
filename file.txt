@@ -1,0 +1,10 @@
+border-top: 3px solid black;
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(grey));
+  background-image: -webkit-linear-gradient(transparent, grey);
+  background-image: -moz-linear-gradient(transparent, grey), -moz-linear-gradient(transparent, grey);
+  background-image: -o-linear-gradient(transparent, grey), -o-linear-gradient(transparent, grey);
+  background-image: linear-gradient(transparent, grey), linear-gradient(transparent, grey);
+  -moz-background-size: 3px 100%;
+  background-size: 3px 100%;
+  background-position: 0 0, 100% 0;
+  background-repeat: no-repeat
