@@ -2,6 +2,22 @@ body {
   background-image: url(subtle.png)
 }
 
+#back {
+  background-color: white;
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image:
+    -webkit-gradient(linear, 0 0, 0 100%, from(grey), to(rgba(0, 0, 0, 0))) 1 100%;
+  -webkit-border-image:
+    -webkit-linear-gradient(grey, rgba(0, 0, 0, 0)) 1 100%;
+  -moz-border-image:
+    -moz-linear-gradient(grey, rgba(0, 0, 0, 0)) 1 100%;
+  -o-border-image:
+    -o-linear-gradient(grey, rgba(0, 0, 0, 0)) 1 100%;
+  border-image:
+    linear-gradient(to bottom, grey, rgba(0, 0, 0, 0)) 1 100%;
+}
+
 #logo {
   padding-bottom: 8px;
 }
