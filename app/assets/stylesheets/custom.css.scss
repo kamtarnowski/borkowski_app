@@ -41,20 +41,22 @@ body {
   border-right: 0px;
   box-shadow: 0px -5px 11px #888, 0px 5px 11px #888;
   color: #000000;
-}
+  z-index: 666;
 
-ul.navbar-nav > li {
+  .navbar-nav {
 
-  z-index: 9999;
+    li {
 
-  &:hover {
-    background-color: #404040;
-    border-radius: 5px;
+      &:hover {
+        background-color: #404040;
+        border-radius: 5px;
+      }
+
+      a {
+        color: #A7A7A7;
+      }
+    }
   }
-}
-
-.navbar-inverse .navbar-nav > li > a {
-  color: #A7A7A7;
 }
 
 #owl-slide .item img{
@@ -64,11 +66,11 @@ ul.navbar-nav > li {
 }
 
 .owl-carousel {
-  z-index: 8888;
-}
+  z-index: 555;
 
-.owl-wrapper-outer {
-  box-shadow: 0 5px 11px #888;
+  .owl-wrapper-outer {
+    box-shadow: 0 5px 11px #888;
+  }
 }
 
 #back_home {
@@ -88,6 +90,10 @@ ul.navbar-nav > li {
   position: relative;
   top: -50px;
   z-index: -111;
+}
+
+h3 {
+  letter-spacing: 1px;
 }
 
 #back_other {
@@ -125,5 +131,26 @@ ul.navbar-nav > li {
   background: -o-linear-gradient(grey, #000000); /* For Opera 11.1 to 12.0 */
   background: -moz-linear-gradient(grey, #000000); /* For Firefox 3.6 to 15 */
   background: linear-gradient(grey, #000000); /* Standard syntax */
+}
 
+#row_foot {
+  letter-spacing: 0.8px;
+  color: #C1C1C1;
+  margin-top: 40px;
+
+  #row_f_left {
+    margin-top: 20px;
+  }
+
+  a:hover {
+    text-decoration: none;
+  }
+
+  ul {
+    list-style-type: none;
+  }
+}
+
+h4 {
+  line-height: 1.3;
 }
