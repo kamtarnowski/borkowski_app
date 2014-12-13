@@ -16,7 +16,8 @@ gem 'friendly_id'
 gem 'meta-tags'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'owlcarousel-rails'
-
+gem 'simple_form'
+gem 'devise'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
