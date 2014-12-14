@@ -16,6 +16,7 @@ gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'owlcarousel-rails'
 gem 'simple_form'
 gem 'devise'
+gem 'rails-i18n'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
