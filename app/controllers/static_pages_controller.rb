@@ -3,6 +3,7 @@ class StaticPagesController < ApplicationController
   end
 
   def home
+    gflash :notice => "The knob of butter is "
   end
 
 
