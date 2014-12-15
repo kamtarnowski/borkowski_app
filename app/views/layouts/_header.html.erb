@@ -34,8 +34,13 @@
               <li><a href="#">Kontakt</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-              <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+              <% if user_signed_in? %>
+                   <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
+                  <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+              <%  else
+
+                  <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
+                  <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
             </ul>
           </div>
         </div>
