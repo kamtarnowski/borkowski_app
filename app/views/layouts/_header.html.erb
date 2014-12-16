@@ -17,12 +17,12 @@
             <li><a class='dropdown-toggle' data-toggle="dropdown" href>Wykorzystywane metody
               <span class="caret"></span></a>
               <ul class="dropdown-menu"">
-                <li><a href="#">Metoda Pierwsza</a> </li>
-                <li><a href="#">Metoda Druga</a> </li>
-                <li><a href="#">Metoda Trzecia</a> </li>
+                <li><a href=" <%= metoda_1_path %> ">Metoda Pierwsza</a> </li>
+                <li><a href=" <%= metoda_2_path %> ">Metoda Druga</a> </li>
+                <li><a href=" <%= metoda_3_path %> ">Metoda Trzecia</a> </li>
               </ul>
-            <li><a href="#">Realizacje</a></li>
-            <li><a href="#">Kontakt</a></li>
+            <li><a href=" <%= realizacje_path %> ">Realizacje</a></li>
+            <li><a href=" <%= kontakt_path %> ">Kontakt</a></li>
             </ul>
 
           <ul class="nav navbar-nav navbar-right">
@@ -31,8 +31,8 @@
                 <li class="dropdown">
                     <li><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li> <a href=" # "><span class="glyphicon glyphicon-edit">Edycja</a></li>
-                        <li> <a href=" <%= destroy_user_session_path %> "><span class="glyphicon glyphicon-log-out">Wyloguj mnie</a></li>
+                        <li> <%= link_to '<span class="glyphicon glyphicon-edit">Edycja'.html_safe, "#" %></li>
+                        <li> <%= link_to '<span class="glyphicon glyphicon-log-out">Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
                     </ul>
                 </li>
             <% else %>
