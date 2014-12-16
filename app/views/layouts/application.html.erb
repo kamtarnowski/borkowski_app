@@ -20,7 +20,7 @@
     <script>
 
         <% flash.each do |key, value| %>
-            <%= add_gritter(value, flash["ffalert"], :image => :notice, :title => 'Komunikat:') %>
+            <%= add_gritter(value, flash[key], :image => :notice, :title => 'Komunikat:') %>
         <% end %>
 
     </script>
