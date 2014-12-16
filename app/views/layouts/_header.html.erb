@@ -10,7 +10,41 @@
     </div>
     <nav class="navbar navbar-inverse" style="box-shadow: <%= yield(:header_box) %>">
       <div class="container-fluid">
-        <div class="navbar-header">
+        <div class="collapse navbar-collapse" id="Navbar">
+            <ul class="nav navbar-nav">
+            <li><%= link_to "Start", root_path %></li>
+            <li class="dropdown">
+            <li><a class='dropdown-toggle' data-toggle="dropdown" href>Wykorzystywane metody
+              <span class="caret"></span></a>
+              <ul class="dropdown-menu"">
+                <li><a href="#">Metoda Pierwsza</a> </li>
+                <li><a href="#">Metoda Druga</a> </li>
+                <li><a href="#">Metoda Trzecia</a> </li>
+              </ul>
+            <li><a href="#">Realizacje</a></li>
+            <li><a href="#">Kontakt</a></li>
+            </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+
+            <% if user_signed_in? %>
+                <li class="dropdown">
+                    <li><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li> <%= link_to 'Edycja<span class="glyphicon glyphicon-edit">', '#' %> </li>
+                    </ul>
+                    </li>
+                <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
+                <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+            <% else %>
+                <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
+                <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+            <% end %>
+
+           </ul>
+           </div>
+
+            <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
@@ -18,31 +52,6 @@
             </button>
           <a class="navbar-brand hidden-lg hidden-md hidden-sm" href="./">Borkowski Wylewki</a>
         </div>
-        <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="nav navbar-nav">
-              <li><%= link_to "Start", root_path %></li>
-              <li class="dropdown">
-              <li><a class='dropdown-toggle' data-toggle="dropdown" href="#">Wykorzystywane metody
-                <span class="caret"></span></a>
-                <ul class="dropdown-menu"">
-                  <li><a style="z-index: 666" href="#">Metoda Pierwsza</a> </li>
-                  <li><a style="z-index: 666" href="#">Metoda Druga</a> </li>
-                  <li><a style="z-index: 666" href="#">Metoda Trzecia</a> </li>
-                </ul>
-              </li>
-              <li><a href="#">Realizacje</a></li>
-              <li><a href="#">Kontakt</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <% if user_signed_in? %>
-                   <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-                  <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
-              <%  else
-
-                  <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-                  <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
-            </ul>
-          </div>
         </div>
     </nav>
 

@@ -14,15 +14,16 @@
 <body>
 
     <%= render 'layouts/header' %>
-
-    <div class="container" style="background-color: white;">
-    <% flash.each do |key, value| %>
-        <div class="alert alert-<%= key %>"><%= value %></div>
-    <% end %>
-    </div>
-
     <%= yield %>
     <%= render 'layouts/footer' %>
+
+    <script>
+
+        <% flash.each do |key, value| %>
+            <%= add_gritter(value, flash["ffalert"], :image => :notice, :title => 'Komunikat:') %>
+        <% end %>
+
+    </script>
 
 </body>
 </html>
