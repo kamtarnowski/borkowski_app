@@ -31,11 +31,10 @@
                 <li class="dropdown">
                     <li><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li> <%= link_to 'Edycja<span class="glyphicon glyphicon-edit">', '#' %> </li>
+                        <li> <a href=" # "><span class="glyphicon glyphicon-edit">Edycja</a></li>
+                        <li> <a href=" <%= destroy_user_session_path %> "><span class="glyphicon glyphicon-log-out">Wyloguj mnie</a></li>
                     </ul>
-                    </li>
-                <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-                <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+                </li>
             <% else %>
                 <li><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
                 <li><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
