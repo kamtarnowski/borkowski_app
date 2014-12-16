@@ -4,4 +4,5 @@ Issues & further improvements:
 - Opinions box, in footer  
 - meta tags in each page  
 - contact_me
-- tests
+- tests  
+- CMS
