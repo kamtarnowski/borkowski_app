@@ -2,13 +2,14 @@
 <html>
 <head>
 
-      <% set_meta_tags :title => full_title(yield(:title)) %>
-      <meta content='width=device-width, initial-scale=1' name='viewport'></meta>
-      <%= stylesheet_link_tag "application", media: "all",
-                              "data-turbolinks-track" => true %>
-      <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-      <%= csrf_meta_tags %>
-      <%= render 'layouts/shim' %>
+  <%= display_meta_tags :site => 'Borkowski Wylewki' %>
+
+  <meta content='width=device-width, initial-scale=1' name='viewport'></meta>
+  <%= stylesheet_link_tag "application", media: "all",
+                          "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+  <%= render 'layouts/shim' %>
 
 </head>
 <body>
