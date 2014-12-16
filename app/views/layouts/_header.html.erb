@@ -31,7 +31,7 @@
                 <li class="dropdown">
                     <li><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<span class="caret"></span></a>
                     <ul class="dropdown-menu">
-                        <li> <%= link_to '<span class="glyphicon glyphicon-edit">Edycja'.html_safe, "#" %></li>
+                        <li> <%= link_to '<span class="glyphicon glyphicon-edit">Edycja'.html_safe, edit_user_registration_path %></li>
                         <li> <%= link_to '<span class="glyphicon glyphicon-log-out">Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
                     </ul>
                 </li>

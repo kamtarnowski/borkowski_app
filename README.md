@@ -1,5 +1,6 @@
-Issues:
+Issues & further improvements:
 
--footer margin-top  
--navbar shadow-box bottom  
--footer md sm xs mode  
+- Facebook API  
+- Opinions box, in footer  
+- meta tags in each page  
+- contact_me
