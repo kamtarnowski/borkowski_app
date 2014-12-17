@@ -48,6 +48,14 @@ body {
   color: #000000;
   z-index: 666;
 
+  .nav.navbar-nav {
+    li.active {
+      a {
+        border-radius: 5px;
+      }
+    }
+  }
+
   .navbar-nav {
 
     li {
