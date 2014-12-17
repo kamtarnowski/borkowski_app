@@ -4,6 +4,7 @@ body {
 
 #back_logo {
   background-color: white;
+  border-radius: 5px 5px 0 0;
   border-top: 3px solid grey;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(grey), to(transparent));
   background-image: -webkit-linear-gradient(grey, transparent);
@@ -20,12 +21,15 @@ body {
   background-size: 3px 100%;
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat;
-  border-radius: 5px 5px 0 0;
   z-index: -111;
+  padding-left: 3px;
+  padding-right: 3px;
 }
 
-#logo {
-  padding-bottom: 8px;
+#logo_image {
+  max-width: 100%;
+  high: auto;
+  z-index: -222;
 }
 
 .navbar-inverse {
