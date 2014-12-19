@@ -5,4 +5,6 @@ Issues & further improvements:
 - meta tags in each page  
 - contact_me
 - tests  
-- CMS
+- CMS  
+- graphic & copyright  
+- with admin panel user index & delete opinions
