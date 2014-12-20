@@ -17,6 +17,7 @@ gem 'owlcarousel-rails'
 gem 'simple_form'
 gem 'devise'
 gem 'rails-i18n'
+gem 'mail_form'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

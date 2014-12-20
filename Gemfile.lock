@@ -115,6 +115,9 @@ GEM
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
+    mail_form (1.5.0)
+      actionmailer (>= 3.2, < 5)
+      activemodel (>= 3.2, < 5)
     meta-tags (2.0.0)
       actionpack (>= 3.0.0)
     mime-types (1.25.1)
@@ -227,6 +230,7 @@ DEPENDENCIES
   gritter
   jbuilder (~> 2.0)
   jquery-rails
+  mail_form
   meta-tags
   owlcarousel-rails
   pg

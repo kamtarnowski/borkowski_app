@@ -12,6 +12,25 @@
         <br><br>Proin gravida tellus vitae dui. Maecenas tempor. Nulla eros mauris, aliquet quis, posuere ut, ultrices non, quam. Pellentesque at odio semper justo placerat convallis. Pellentesque diam. Sed mattis, pede ut ultricies commodo, velit magna auctor leo, at ultricies velit risus id erat. Donec et eros in urna interdum vulputate. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nunc fermentum nibh id ante. Aliquam felis augue, gravida non, venenatis sed, congue et, orci. Aenean scelerisque tortor sed magna. Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Nullam hendrerit, mi et mattis lobortis, nibh ante vehicula magna, interdum porta massa mauris vitae odio. Integer aliquam arcu non enim. Fusce felis metus, dignissim in, molestie vel, pellentesque a, odio.
       </h4>
 
+      <hr>
+
+      <h2>Wyślij wiadomość do nas</h2>
+
+      <br>
+
+      <%= simple_form_for @contact do |f| %>
+          <%= f.input :name, :required => true, label: 'Imię' %>
+          <%= f.input :email, :required => true %>
+          <%= f.input :message, :as => :text, :required => true, label: 'Wiadomość' %>
+          <div class= "hidden">
+            <%= f.input :nickname, :hint => 'Zostaw te pole puste!' %>
+          </div>
+          <div>
+            <br>
+            <%= f.button :submit, 'Wyślij wiadomość', :class=> "btn btn-primary" %>
+          </div>
+      <% end %>
+
     </div>
   </div>
 </div>
