@@ -26,6 +26,7 @@ gem 'spring',        group: :development
 
 group :development, :test do
   gem 'rspec-rails'
+  gem 'foreman'
 end
 
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
