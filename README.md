@@ -2,7 +2,7 @@ Issues & further improvements:
 
 - Facebook API  
 - Opinions box, in footer  
-- meta tags in each page  
+- meta tags on each page  
 - tests  
 - CMS  
 - graphic & copyright  
