@@ -6,4 +6,6 @@ Issues & further improvements:
 - tests  
 - CMS  
 - graphic & copyright  
-- with admin panel user index & delete opinions
+- with admin panel user index & delete opinions  
+- logos g plus facebook within footer  
+- cookies
