@@ -16,6 +16,7 @@
                 <p>Obecnie oczekujemy potwierdzenia mailowego Użytkownika <%= resource.unconfirmed_email %></p>
             <% end %>
 
+            <%= f.input :name, label: 'Imię', hint: "Zostaw pole puste, jeśli nie chcesz zmienić.", required: false %>
             <%= f.input :password, autocomplete: "off", label: 'Hasło', hint: "Zostaw pole puste, jeśli nie chcesz zmienić.", required: false %>
             <%= f.input :password_confirmation, label: 'Potwierdzenie hasła', required: false %>
             <%= f.input :current_password, label: "Obecne hasło", hint: "Należy podać obecne hasło, aby zatwierdzić zmiany.", required: true %>
