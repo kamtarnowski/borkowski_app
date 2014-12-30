@@ -17,7 +17,7 @@
       <iframe width="470" height="264" src="//www.youtube.com/embed/wc60KwbZsPc" frameborder="0" allowfullscreen></iframe>
     </div>
     <div class="col-sm-offset-1 col-sm-10 col-lg-offset-1 col-lg-4">
-      <h1> Metoda pierwsza </h1>
+      <h1> Metoda pierwsza  </h1>
       <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </h3>
     </div>
   </div>
@@ -53,10 +53,15 @@
         $(".owl-carousel").owlCarousel({
 
             autoPlay: 5000,
-            navigation : false,
             slideSpeed : 300,
             paginationSpeed : 400,
             singleItem: true,
+            navigation: true,
+            navigationText: [
+                "<i class='fa fa-chevron-circle-left'></i>",
+                "<i class='fa fa-chevron-circle-right'></i>"
+            ]
+
         });
     });
 </script>

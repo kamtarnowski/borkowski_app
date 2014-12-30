@@ -4,6 +4,8 @@ body {
 
 #back_logo {
   background-color: white;
+  -webkit-border-radius: 5px 5px 0 0;
+  -moz-border-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
   border-top: 3px solid grey;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(grey), to(transparent));
@@ -40,6 +42,8 @@ body {
   letter-spacing: 1.2px;
   font-size: 1.2em;
   margin-bottom: 0px;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
   border-radius: 0px;
   border-left: 0px;
   border-right: 0px;
@@ -51,12 +55,16 @@ body {
   .nav.navbar-nav {
     li.active {
       a {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
         border-radius: 5px;
       }
     }
 
     .open {
       a {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
         border-radius: 5px;
       }
     }
@@ -68,6 +76,8 @@ body {
 
       &:hover {
         background-color: #404040;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
         border-radius: 5px;
       }
 
@@ -141,6 +151,8 @@ h3 {
 }
 
 #back2nd {
+  -webkit-border-radius: 0 0 5px 5px;
+  -moz-border-radius: 0 0 5px 5px;
   border-radius: 0 0 5px 5px;
 
   background: -webkit-linear-gradient(grey, #000000); /* For Safari 5.1 to 6.0 */
@@ -175,4 +187,18 @@ h4 {
   text-align: right;
   margin-top: 20px;
   margin-right: 20px;
+}
+
+.owl-theme .owl-controls .owl-buttons div {
+  position: absolute;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-prev{
+  left: 45px;
+  top: 40%;
+}
+
+.owl-theme .owl-controls .owl-buttons .owl-next{
+  right: 45px;
+  top: 40%;
 }

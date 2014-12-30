@@ -13,7 +13,10 @@
  *= require gritter
  *= require owl.carousel
  *= require owl.theme
+ *= require font-awesome
  */
+
+@import "font-awesome";
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
