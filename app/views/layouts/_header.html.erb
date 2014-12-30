@@ -25,15 +25,15 @@
 
             <% if user_signed_in? %>
                 <li class="dropdown">
-                    <li><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<span class="caret"></span></a>
+                    <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li class=" <%='active' if current_page?(edit_user_registration_path) %> "> <%= link_to '<span class="glyphicon glyphicon-edit">Edycja'.html_safe, edit_user_registration_path %></li>
-                        <li> <%= link_to '<span class="glyphicon glyphicon-log-out">Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
+                        <li class=" <%='active' if current_page?(edit_user_registration_path) %> "> <%= link_to '<i class="fa fa-pencil fa-fw"></i>Edycja'.html_safe, edit_user_registration_path %></li>
+                        <li> <%= link_to '<i class="fa fa-sign-out"></i>Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
                     </ul>
                 </li>
             <% else %>
-                <li class=" <%='active' if current_page?(new_user_registration_path) %> "><a href=" <%= new_user_registration_path %> "><span class="glyphicon glyphicon-user"></span>Rejestracja</a></li>
-                <li class=" <%='active' if current_page?(new_user_session_path) %> "><a href=" <%= new_user_session_path %> "><span class="glyphicon glyphicon-log-in"></span>Logowanie</a></li>
+                <li class=" <%='active' if current_page?(new_user_registration_path) %> "><a href=" <%= new_user_registration_path %> "><i class="fa fa-user fa-fw"></i>Rejestracja</a></li>
+                <li class=" <%='active' if current_page?(new_user_session_path) %> "><a href=" <%= new_user_session_path %> "><i class="fa fa-sign-in"></i>Logowanie</a></li>
             <% end %>
 
            </ul>
