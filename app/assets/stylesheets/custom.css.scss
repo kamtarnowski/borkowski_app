@@ -168,6 +168,11 @@ h3 {
 
   #row_f_left {
     margin-top: 20px;
+
+    ul li {
+      position: relative;
+      left: -10px;
+    }
   }
 
   a:hover {
