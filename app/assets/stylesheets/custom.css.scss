@@ -102,8 +102,26 @@ body {
   }
 }
 
-#back_home {
+#owl-slide2 {
 
+  .owl-pagination {
+    visibility: hidden;
+    display: none !important;
+  }
+
+  .item img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
+
+
+#left_slide {
+
+}
+
+#back_home {
   border-top: 3px solid black;
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), to(grey));
   background-image: -webkit-linear-gradient(transparent, grey);

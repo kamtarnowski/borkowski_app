@@ -4,10 +4,16 @@
 
       <div class="col-md-10 col-md-offset-1">
 
-      </div>
+        <div id="owl-slide2" class="owl-carousel_foot owl-theme">
+          <% Opinion.all.each do |x|%>
 
-     <p>Kamil
-      </p>
+            <div id='left_slide' class="item"> <blockquote> <p><%= opinion_id_cont %></p> <footer><%= show_user %></footer></blockquote> </div>
+            <div id='right_slide' class="item"> <blockquote class="blockquote-reverse"> <p><%= opinion_id_cont %></p> <footer><%= show_user %></footer></blockquote> </div>
+
+          <% end %>
+        </div>
+
+      </div>
 
     </div>
 
