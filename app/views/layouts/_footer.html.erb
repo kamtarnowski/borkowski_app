@@ -2,6 +2,8 @@
 
     <div class="container" id="back2nd" style='margin-top: <%= yield(:footer_top) %>'>
 
+      <% if Opinion.count > 0 %>
+
       <div class="row" id="title_opinion">
         <div class="col-md-10 col-md-offset-1">
           <h4 style="color: #C1C1C1"><em>Opinie o nas:</em></h4>
@@ -22,6 +24,8 @@
 
         </div>
       </div>
+
+      <% end %>
 
       <div class="row" id="row_foot">
         <div class="col-sm-4 col-lg-offset-1 col-lg-6">
