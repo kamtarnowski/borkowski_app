@@ -8,4 +8,5 @@ Issues & further improvements:
 - graphic & copyright  
 - with admin panel user index & delete opinions  
 - logos g plus facebook within footer  
-- cookies
+- cookies  
+- gallery  
