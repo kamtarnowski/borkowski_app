@@ -1,6 +1,26 @@
-<% Opinion.all.each do |opn| %>
+<div class="container" id="back_other">
+  <div class="row" id="row_next">
+    <div class="col-sm-offset-1 col-sm-10 col-lg-offset-1 col-lg-10">
 
-    <%= opn.content %> <br> <%= opn.id %>
+          <div class="table-responsive">
+              <table class="table table-hover">
 
-<% end %>
+                <tr>
+                  <th>Opinion_id</th>
+                  <th>Treść</th>
+                  <th>Użytkownik / id</th>
+                </tr>
+                <% Opinion.all.each do |opn| %>
+                <tr>
+                  <td><%= opn.id %></td>
+                  <td><%= opn.content %></td>
+                  <td><%= opn.user.name %> / <b><%= opn.user.id %></b></td>
+                </tr>
+                <% end %>
 
+              </table>
+          </div>
+
+    </div>
+  </div>
+</div>

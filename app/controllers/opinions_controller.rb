@@ -1,7 +1,9 @@
 class OpinionsController < ApplicationController
-  before_action :authenticate_user!, only: [:create]
+  before_action :authenticate_user!
 
-end
+  def new
+  end
+
   def create
     @opinion = current_user.opinion.build(opinion_params)
   end
@@ -19,6 +21,8 @@ end
 
   def opinion_params
     params.require(:opinion).permit(:content)
+  end
+
 end
 
 
