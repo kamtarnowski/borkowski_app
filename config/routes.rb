@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, controllers: { sessions: 'sessions' }
   root 'static_pages#home'
   resources "contacts", only: [:new, :create]
   resources "opinions"
