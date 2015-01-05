@@ -25,6 +25,7 @@
 
             <% if user_signed_in? %>
                 <% if current_user.admin? %>
+                    <li><%= link_to 'Użytkownicy', opinions_path %></li>
                     <li><%= link_to 'Opinie', opinions_path %></li>
                 <% end %>
                 <li class="dropdown">
