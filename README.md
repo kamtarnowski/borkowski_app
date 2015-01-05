@@ -10,3 +10,4 @@ Issues & further improvements:
 - logos g plus facebook within footer  
 - cookies  
 - gallery  
+- fixes col-md

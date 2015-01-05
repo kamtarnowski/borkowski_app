@@ -8,7 +8,7 @@ class OpinionsController < ApplicationController
 
   def destroy
     Opinion.find(params[:id]).delete
-    redirect_to opinions_path
+    redirect_to request.referrer || root_path
   end
 
   def show
