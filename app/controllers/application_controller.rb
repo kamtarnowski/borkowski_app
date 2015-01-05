@@ -5,6 +5,21 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_devise_perm_parm, if: :devise_controller?
 
+  private
+
+  def correct_admin
+    if user_signed_in?
+      if current_user.admin?
+      else
+        redirect_to root_path
+        flash[:warning] = 'Nie masz uprawnień'
+      end
+    else
+      redirect_to root_path
+      flash[:warning] = 'Nie masz uprawnień'
+    end
+  end
+
   protected
 
   def configure_devise_perm_parm
