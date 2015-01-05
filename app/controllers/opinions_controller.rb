@@ -9,6 +9,8 @@ class OpinionsController < ApplicationController
   end
 
   def destroy
+    Opinion.find(params[:id]).delete
+    redirect_to opinions_path
   end
 
   def show

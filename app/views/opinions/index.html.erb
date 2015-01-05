@@ -13,7 +13,7 @@
                 <% Opinion.all.each do |opn| %>
                 <tr>
                   <td><%= opn.id %></td>
-                  <td><%= opn.content %></td>
+                  <td><%= opn.content %><%= link_to '<i class="fa fa-times"></i>'.html_safe, opn, :method => :delete %></td>
                   <td><%= opn.user.name %> / <b><%= opn.user.id %></b></td>
                 </tr>
                 <% end %>

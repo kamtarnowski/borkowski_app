@@ -24,6 +24,9 @@
           <ul class="nav navbar-nav navbar-right">
 
             <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                    <li><%= link_to 'Opinie', opinions_path %></li>
+                <% end %>
                 <li class="dropdown">
                     <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>
                     <ul class="dropdown-menu">

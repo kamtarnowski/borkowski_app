@@ -9,7 +9,8 @@
 User.create!(name: 'Kamil T',
             email: 'kam@gmail.com',
             password: 'kamil007',
-            password_confirmation: 'kamil007')
+            password_confirmation: 'kamil007',
+            admin: true)
 
 10.times do
   name = Faker::Name.name
@@ -19,7 +20,11 @@ User.create!(name: 'Kamil T',
   User.create!(name: name, email: email, password: password, password_confirmation: password)
 end
 
-users = User.limit(9)
+users = []
+User.all.each do |user|
+  next if user.admin?
+  users << user
+end
 
 10.times do
   content = Faker::Lorem.sentence(10)
