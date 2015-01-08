@@ -1,8 +1,9 @@
 module ApplicationHelper
 
   def opinion_id_cont
-    opin = Opinion.all
-    @rand_opin = Opinion.find(rand((opin[-1].id)..(opin[0].id)))
+    int_opin = []
+    Opinion.all.each { |x| int_opin << x.id.to_i }
+    @rand_opin = Opinion.find(int_opin.sample)
     @rand_opin_cont = @rand_opin.content
   end
 
