@@ -18,6 +18,7 @@ User.create!(name: 'Kamil T',
   password = Faker::Internet.password(8)
 
   User.create!(name: name, email: email, password: password, password_confirmation: password)
+
 end
 
 users = []
@@ -29,5 +30,4 @@ end
 10.times do
   content = Faker::Lorem.sentence(10)
   users.each { |user| user.create_opinion!(content: content) }
-
 end
