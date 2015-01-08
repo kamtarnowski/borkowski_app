@@ -1,6 +1,13 @@
 class OpinionsController < ApplicationController
-  before_action :authenticate_user!, only: [:create, :show]
+  before_action :authenticate_user!, only: [:create, :show, :new]
   before_action :correct_admin, only: [:destroy, :index]
+
+  def new
+    if current_user.opinion
+      redirect_to request.referrer || root_path
+      flash[:notice] = 'Użytkownik posiada już opinię.'
+    end
+  end
 
   def create
     @opinion = current_user.opinion.build(opinion_params)
