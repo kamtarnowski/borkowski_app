@@ -28,6 +28,9 @@
                     <li><%= link_to 'Użytkownicy', users_path %></li>
                     <li><%= link_to 'Opinie', opinions_path %></li>
                 <% end %>
+                <% if current_user.opinion %>
+                    <li class=" <%= 'active' if current_page?(current_user.opinion) %> "> <%= link_to '<i class="fa fa-comment"></i>Opinia'.html_safe, current_user.opinion %></li>
+                <% end %>
                 <li class="dropdown">
                     <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>
                     <ul class="dropdown-menu">
