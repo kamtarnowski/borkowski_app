@@ -16,7 +16,7 @@
                 <td><%= user.id %></td>
                 <td><%= user.name %></td>
                 <td><%= user.email %>
-                <td><%= link_to '<i class="fa fa-times"></i>'.html_safe, user, :method => :delete %></td>
+                <td><%= link_to '<i class="fa fa-times"></i>'.html_safe, admin_destroy_user_path(user), :method => :delete %></td>
 
               </tr>
           <% end %>

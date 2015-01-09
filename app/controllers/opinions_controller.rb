@@ -10,7 +10,7 @@ class OpinionsController < ApplicationController
   end
 
   def create
-    @opinion = current_user.opinion.build(opinion_params)
+    current_user.opinion.build(opinion_params)
   end
 
   def destroy
