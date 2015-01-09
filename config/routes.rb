@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :contacts, only: [:new, :create]
   resources :opinions
   delete 'users/:id' => 'users#destroy', :as => :admin_destroy_user
-  get '/users',        to: 'users#index'
+  get '/users',       to: 'users#index'
   get '/contact',     to: 'contacts#new'
   get '/realizacje',  to: 'static_pages#realizacje'
   get '/metoda_1',    to: 'static_pages#metoda_1'
