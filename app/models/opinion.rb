@@ -5,7 +5,7 @@ class Opinion < ActiveRecord::Base
   validates :user_id, presence: true
 
   def to_param
-    "#{content.first(25).parameterize}"
+    "#{id}-#{content.first(25).parameterize}"
   end
 
 end
