@@ -10,7 +10,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem "gritter"
-gem 'friendly_id'
 gem 'meta-tags'
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'owlcarousel-rails'
