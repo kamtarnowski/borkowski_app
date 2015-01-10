@@ -10,6 +10,7 @@
             <th>Użytkownik_id</th>
             <th>Imię</th>
             <th>Email</th>
+            <th>Usunięcie</th>
           </tr>
           <% User.all.each do |user| %>
               <tr>
@@ -17,7 +18,6 @@
                 <td><%= user.name %></td>
                 <td><%= user.email %>
                 <td><%= link_to '<i class="fa fa-times"></i>'.html_safe, admin_destroy_user_path(user), :method => :delete %></td>
-
               </tr>
           <% end %>
 

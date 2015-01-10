@@ -38,9 +38,6 @@
                 ]
 
             });
-        });
-
-        $(document).ready(function(){
             $(".owl-carousel_foot").owlCarousel({
 
                 autoPlay: 7000,
@@ -49,6 +46,9 @@
                 singleItem: true,
 
             });
+            $("i.fa.fa-pencil-square-o").click(function() {
+                $('.edit_slide').slideToggle();
+            })
         });
 
     </script>
