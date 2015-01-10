@@ -19,8 +19,8 @@
       <br>
 
       <%= simple_form_for @contact do |f| %>
-          <%= f.input :name, :required => true, label: 'Imię' %>
-          <%= f.input :email, :required => true %>
+          <%= f.input :name, :required => true, label: 'Imię', input_html: { :value => "#{current_user.name}" } if user_signed_in?  %>
+          <%= f.input :email, :required => true, input_html: { :value => "#{current_user.email}" } if user_signed_in? %>
           <%= f.input :message, :as => :text, :required => true, label: 'Wiadomość' %>
           <div class= "hidden">
             <%= f.input :nickname, :hint => 'Zostaw te pole puste!' %>

@@ -5,8 +5,7 @@ Issues & further improvements:
 - meta tags on each page  
 - tests  
 - CMS  
-- graphic & copyright  
-- with admin panel user index & delete opinions  
+- graphic & copyright   
 - logos g plus facebook within footer  
 - cookies  
 - gallery  
