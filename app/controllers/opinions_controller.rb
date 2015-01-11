@@ -25,11 +25,11 @@ class OpinionsController < ApplicationController
   def create
     @opinion = current_user.build_opinion(opinion_params)
     if @opinion.save
-      redirect_to root_path
       flash[:notice] = "Przesłano opinię, dziękujemy."
+      redirect_to root_path
     else
-      redirect_to request.referrer || root_path
       flash[:notice] = "Nie udało się przesłać opini."
+      render 'new'
     end
   end
 
