@@ -5,7 +5,5 @@ Issues & further improvements:
 - tests  
 - CMS  
 - graphic & copyright   
-- logos g plus facebook within footer  
 - cookies  
 - gallery  
-- fixes col-md
