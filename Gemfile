@@ -20,6 +20,8 @@ gem 'mail_form'
 gem "font-awesome-rails"
 gem 'faker'
 gem "jquery-validation-rails"
+gem 'will_paginate'
+gem 'will_paginate-bootstrap'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

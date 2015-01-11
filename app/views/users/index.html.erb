@@ -12,7 +12,7 @@
             <th>Email</th>
             <th>Usunięcie</th>
           </tr>
-          <% User.all.each do |user| %>
+          <% @users.each do |user| %>
               <tr>
                 <td><%= user.id %></td>
                 <td><%= user.name %></td>
@@ -24,6 +24,7 @@
         </table>
       </div>
 
+      <%= will_paginate @users, renderer: BootstrapPagination::Rails, :previous_label => t("Wstecz"), :next_label => t("Dalej") %>
 
     </div>
   </div>

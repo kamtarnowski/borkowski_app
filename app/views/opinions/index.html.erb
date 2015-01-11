@@ -10,33 +10,34 @@
                   <th>Treść</th>
                   <th>Użytkownik / id</th>
                 </tr>
-                <% Opinion.all.each do |opn| %>
+
+                <% @opinions.each do |opn| %>
                 <tr>
                   <td><%= opn.id %></td>
                   <td><%= opn.content %> &nbsp; <%= link_to '<i class="fa fa-times"></i>'.html_safe, opn, :method => :delete %> &nbsp; <i class="fa fa-pencil-square-o"></i> </td>
-
-                  <td><%= opn.user.name %> / <b><%= opn.user.id %></b></td>
+                  <td><abbr title=" <%= opn.user.email %> "><%= opn.user.name %> </abbr> / <b><%= opn.user.id %></b></td>
                 </tr>
                 <tr class="edit_slide" style="display: none">
 
-                  <td></td>
-                  <td>
-                  <p><strong>Edycja opini:</strong></p>
+                          <td></td>
+                          <td>
+                          <p><strong>Edycja opini:</strong></p>
 
-                  <%= simple_form_for opn do |form| %>
-                      <%= form.input :content, as: :text, input_html: { :value => opn.content, minleangth: 50, maxlength: 140 }, label: 'Treść:', hint: 'Znaki Minimum: 50 Maximum: 140', required: false %>
+                          <%= simple_form_for opn do |form| %>
+                              <%= form.input :content, as: :text, input_html: { :value => opn.content, minleangth: 50, maxlength: 140 }, label: 'Treść:', hint: 'Znaki Minimum: 50 Maximum: 140', required: false %>
 
-                      <%= form.button :submit, 'Zmień opinię' %>
-                  <% end %>
-                  </td>
-                  <td></td>
+                              <%= form.button :submit, 'Zmień opinię' %>
+                          <% end %>
+                          </td>
+                          <td></td>
 
                 </tr>
                 <% end %>
 
               </table>
-
           </div>
+
+      <%= will_paginate @opinions, renderer: BootstrapPagination::Rails, :previous_label => t("Wstecz"), :next_label => t("Dalej") %>
 
     </div>
   </div>
