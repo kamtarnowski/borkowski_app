@@ -24,12 +24,20 @@
           <ul class="nav navbar-nav navbar-right">
 
             <% if user_signed_in? %>
-                <% if current_user.admin? %>
-                    <li><%= link_to 'Użytkownicy', users_path %></li>
-                    <li><%= link_to 'Opinie', opinions_path %></li>
-                <% end %>
                 <% if current_user.opinion %>
                     <li class=" <%= 'active' if current_page?(current_user.opinion) %> "> <%= link_to '<i class="fa fa-comment"></i>Opinia'.html_safe, current_user.opinion %></li>
+                <% end %>
+                <% if current_user.opinion.nil? %>
+                    <li class=" <%= 'active' if current_page?(new_opinion_path) %> "> <%= link_to '<i class="fa fa-comment-o"></i>Nowa opinia'.html_safe, new_opinion_path %></li>
+                <% end %>
+                <% if current_user.admin? %>
+                    <li class="dropdown">
+                    <li class=" <%='active' if current_page?(users_path) || current_page?(opinions_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Panel Admina<i class="fa fa-caret-square-o-down"></i></a>
+                      <ul class="dropdown-menu">
+                        <li class=" <%='active' if current_page?(users_path) %> "><%= link_to 'Użytkownicy', users_path %></li>
+                        <li class=" <%='active' if current_page?(opinions_path) %> "><%= link_to 'Opinie', opinions_path %></li>
+                      </ul>
+                    </li>
                 <% end %>
                 <li class="dropdown">
                     <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>

@@ -7,6 +7,9 @@ class OpinionsController < ApplicationController
       redirect_to request.referrer || root_path
       flash[:notice] = 'Użytkownik posiada już opinię.'
     end
+
+    @opinion = Opinion.new
+
   end
 
   def update
@@ -20,7 +23,14 @@ class OpinionsController < ApplicationController
   end
 
   def create
-    @opinion = current_user.opinion.build(opinion_params)
+    @opinion = current_user.build_opinion(opinion_params)
+    if @opinion.save
+      redirect_to root_path
+      flash[:notice] = "Przesłano opinię, dziękujemy."
+    else
+      redirect_to request.referrer || root_path
+      flash[:notice] = "Nie udało się przesłać opini."
+    end
   end
 
   def destroy

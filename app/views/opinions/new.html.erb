@@ -2,9 +2,15 @@
   <div class="row" id="row_next">
     <div class="col-sm-offset-1 col-sm-10 col-lg-offset-1 col-lg-10">
 
-      <h2>Twoja Opinia</h2>
+      <h2>Napisz Opinię o nas</h2>
 
+      <%= simple_form_for @opinion do |opinion| %>
 
+          <%= opinion.input :content, required: true, label: 'Treść:', input_html: { minleangth: 50, maxlength: 140 }, hint: 'Ilość znaków: 50 minimum, 140 maksimum' %>
+
+          <%= opinion.button :submit, 'Prześlij opinię' %>
+
+      <% end %>
 
     </div>
   </div>
