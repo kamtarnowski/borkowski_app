@@ -19,6 +19,7 @@ gem 'rails-i18n'
 gem 'mail_form'
 gem "font-awesome-rails"
 gem 'faker'
+gem "jquery-validation-rails"
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
