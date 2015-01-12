@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { sessions: 'sessions' }
-  root 'static_pages#home'
   resources :contacts, only: [:new, :create]
   resources :opinions
+  root 'static_pages#home'
   delete 'users/:id' => 'users#destroy', :as => :admin_destroy_user
   get '/users',       to: 'users#index'
   get '/contact',     to: 'contacts#new'
