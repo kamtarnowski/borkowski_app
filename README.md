@@ -1,9 +1,9 @@
 Issues & further improvements:
 
+- CMS  
 - Facebook API  
+- gallery  
+- cookies  
 - meta tags on each page  
 - tests  
-- CMS  
 - graphic & copyright   
-- cookies  
-- gallery  
