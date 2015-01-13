@@ -1,6 +1,6 @@
 class OpinionsController < ApplicationController
   before_action :authenticate_user!, only: [:create, :show, :new]
-  before_action :correct_admin, only: [:destroy, :index, :update]
+  before_action :correct_admin, only: [:destroy, :index, :update, :edit]
 
   def new
     if current_user.opinion
@@ -20,6 +20,10 @@ class OpinionsController < ApplicationController
       redirect_to request.referrer
       flash[:notice] = 'Nie udało się edytować.'
     end
+  end
+
+  def edit
+    @opinion = Opinion.find(params[:id])
   end
 
   def create
