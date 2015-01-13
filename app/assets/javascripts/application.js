@@ -16,7 +16,6 @@
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_pl
 //= require turbolinks
-//= require jquery
 //= require gritter
 //= require owl.carousel
 //= require bootstrap-sprockets
