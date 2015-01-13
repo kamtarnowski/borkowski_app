@@ -11,12 +11,13 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_pl
-//= require turbolinks
-//= require gritter
 //= require owl.carousel
+//= require gritter
+//= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
