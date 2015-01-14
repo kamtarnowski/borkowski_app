@@ -11,33 +11,35 @@
                   <th>Użytkownik / id</th>
                 </tr>
 
-                <% @opinions.each do |opn| %>
-                <tr>
-                  <td><%= opn.id %></td>
-                  <td><%= opn.content %> &nbsp; <%= link_to '<i class="fa fa-times"></i>'.html_safe, opn, :method => :delete %> &nbsp; <i class="fa fa-pencil-square-o"></i> </td>
-                  <td><abbr title=" <%= opn.user.email %> "><%= opn.user.name %> </abbr> / <b><%= opn.user.id %></b></td>
-                </tr>
-                <tr class="edit_slide" style="display: none">
+                <% @opinions.each do |opinion| %>
 
-                          <td></td>
-                          <td>
-                          <p><strong>Edycja opini:</strong></p>
+                    <tr>
+                      <td><%= opinion.id %></td>
+                      <td><%= opinion.content %> &nbsp; <%= link_to '<i class="fa fa-times"></i>'.html_safe, opinion, :method => :delete %> &nbsp; <%= link_to 'nowa_EDYCJA', edit_opinion_path(opinion), class: 'nowa_edycja', remote: true %> <i class="fa fa-pencil-square-o"></i> </td>
+                      <td><abbr title=" <%= opinion.user.email %> "><%= opinion.user.name %> </abbr> / <b><%= opinion.user.id %></b></td>
+                    </tr>
+                    <tr class="edit_slide" style="display: none">
 
-                          <%= simple_form_for opn do |form| %>
-                              <%= form.input :content, as: :text, input_html: { :value => opn.content, minleangth: 50, maxlength: 140 }, label: 'Treść:', hint: 'Znaki Minimum: 50 Maximum: 140', required: false %>
+                      <td></td>
+                      <td>
+                        <p><strong>Edycja opini:</strong></p>
 
-                              <%= form.button :submit, 'Zmień opinię' %>
-                          <% end %>
-                          </td>
-                          <td></td>
+                        <%= simple_form_for opinion do |form| %>
+                            <%= form.input :content, as: :text, input_html: { :value => opinion.content, minleangth: 50, maxlength: 140 }, label: 'Treść:', hint: 'Znaki Minimum: 50 Maximum: 140', required: false %>
 
-                </tr>
+                            <%= form.button :submit, 'Zmień opinię' %>
+                        <% end %>
+
+                      </td>
+                      <td></td>
+
+                    </tr>
                 <% end %>
+                <%= will_paginate @opinions, renderer: BootstrapPagination::Rails, :previous_label => t("Wstecz"), :next_label => t("Dalej") %>
 
               </table>
           </div>
 
-      <%= will_paginate @opinions, renderer: BootstrapPagination::Rails, :previous_label => t("Wstecz"), :next_label => t("Dalej") %>
 
     </div>
   </div>
