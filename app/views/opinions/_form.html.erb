@@ -1,0 +1,12 @@
+<td></td>
+<td>
+  <p><strong>Edycja opini:</strong></p>
+
+  <%= simple_form_for @opinion do |form| %>
+      <%= form.input :content, as: :text, input_html: { :value => @opinion.content, minleangth: 50, maxlength: 140 }, label: 'Treść:', hint: 'Znaki Minimum: 50 Maximum: 140', required: false %>
+
+      <%= form.button :submit, 'Zmień opinię' %>
+  <% end %>
+
+</td>
+<td></td>

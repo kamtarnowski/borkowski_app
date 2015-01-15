@@ -1,1 +1,3 @@
-$('.edit_slide').toggle();
+$('#<%=@opinion.id%>_edit_slide').toggle();
+$('#<%=@opinion.id%>_edit_slide').html("<%= j render 'form'  %>");
+

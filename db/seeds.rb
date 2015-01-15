@@ -15,7 +15,7 @@ User.create!(name: 'Kamil T',
             password_confirmation: 'kamil007',
             admin: true)
 
-10.times do
+20.times do
   name = Faker::Name.name
   email = Faker::Internet.email
   password = Faker::Internet.password(8)
@@ -30,7 +30,9 @@ User.all.each do |user|
   users << user
 end
 
-10.times do
-  content = Faker::Lorem.sentence(10)
-  users.each { |user| user.create_opinion!(content: content) }
+20.times do
+  users.each do |user|
+    content = Faker::Lorem.sentence(10)
+    user.create_opinion!(content: content)
+  end
 end
