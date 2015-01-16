@@ -1,68 +1,74 @@
 <header>
 
-    <div class='container' id="back_logo">
-          <%= link_to image_tag('Panorama_header.png', alt: 'Logo Borkowski Wylewki',
-                                style: 'max-width: 100%; high: auto', id: 'logo_image'), root_path %>
-    </div>
-    <nav class="navbar navbar-inverse" style="box-shadow: <%= yield(:header_box) %>">
-      <div class="container-fluid">
-        <div class="collapse navbar-collapse" id="Navbar">
-            <ul class="nav navbar-nav">
-            <li class=" <%= 'active' if current_page?(root_path) %> "><%= link_to '<i class="fa fa-home"></i>Start'.html_safe, root_path %></li>
-            <li class="dropdown">
-            <li class="<%='active' if current_page?(metoda_1_path) || current_page?(metoda_2_path) || current_page?(metoda_3_path)%>"><a class="dropdown-toggle" data-toggle="dropdown" href>Metody działalności
-              <i class="fa fa-caret-down"></i></a>
-              <ul class="dropdown-menu"">
-              <% BusinessMethod.all.each do |method| %>
+  <div class='container' id="back_logo">
+    <%= link_to image_tag('Panorama_header.png', alt: 'Logo Borkowski Wylewki',
+                          style: 'max-width: 100%; high: auto', id: 'logo_image'), root_path %>
+  </div>
+  <nav class="navbar navbar-inverse" style="box-shadow: <%= yield(:header_box) %>">
+    <div class="container-fluid">
+      <div class="collapse navbar-collapse" id="Navbar">
+        <ul class="nav navbar-nav">
+          <li class=" <%= 'active' if current_page?(root_path) %> "><%= link_to '<i class="fa fa-home"></i>Start'.html_safe, root_path %></li>
+
+          <li class="dropdown <% BusinessMethod.all.each do |method| %>
+                                <%= 'active' if current_page?(business_method_path(method)) %>
+                              <% end %>">
+            <a class="dropdown-toggle " data-toggle="dropdown" href="">Metody działalności<i class="fa fa-caret-down"></i></a>
+
+            <ul class="dropdown-menu"">
+            <% BusinessMethod.all.each do |method| %>
                 <li class=" <%='active' if current_page?(business_method_path(method)) %> "><a href=" <%= business_method_path(method) %> "><%= method.title %></a> </li>
-              <% end %>
-              </ul>
+            <% end %>
+            </ul>
+
+            </li>
+
             <li class="<%='active' if current_page?(realizacje_path) %>"><a href=" <%= realizacje_path %> "><i class="fa fa-history"></i>Realizacje</a></li>
             <li class=" <%='active' if current_page?(contact_path) %> "><a href=" <%= contact_path %> "><i class="fa fa-envelope"></i>Kontakt</a></li>
             </ul>
 
-          <ul class="nav navbar-nav navbar-right">
+            <ul class="nav navbar-nav navbar-right">
 
-            <% if user_signed_in? %>
-                <% if current_user.opinion %>
-                    <li class=" <%= 'active' if current_page?(current_user.opinion) %> "> <%= link_to '<i class="fa fa-comment"></i>Opinia'.html_safe, current_user.opinion %></li>
-                <% end %>
-                <% if current_user.opinion.nil? %>
-                    <li class=" <%= 'active' if current_page?(new_opinion_path) %> "> <%= link_to '<i class="fa fa-comment-o"></i>Nowa opinia'.html_safe, new_opinion_path %></li>
-                <% end %>
-                <% if current_user.admin? %>
-                    <li class="dropdown">
-                    <li class=" <%='active' if current_page?(users_path) || current_page?(opinions_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Panel Admina<i class="fa fa-caret-square-o-down"></i></a>
-                      <ul class="dropdown-menu">
-                        <li class=" <%='active' if current_page?(users_path) %> "><%= link_to 'Użytkownicy', users_path %></li>
-                        <li class=" <%='active' if current_page?(opinions_path) %> "><%= link_to 'Opinie', opinions_path %></li>
-                      </ul>
-                    </li>
-                <% end %>
-                <li class="dropdown">
-                    <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>
+              <% if user_signed_in? %>
+                  <% if current_user.opinion %>
+                      <li class=" <%= 'active' if current_page?(current_user.opinion) %> "> <%= link_to '<i class="fa fa-comment"></i>Opinia'.html_safe, current_user.opinion %></li>
+                  <% end %>
+                  <% if current_user.opinion.nil? %>
+                      <li class=" <%= 'active' if current_page?(new_opinion_path) %> "> <%= link_to '<i class="fa fa-comment-o"></i>Nowa opinia'.html_safe, new_opinion_path %></li>
+                  <% end %>
+                  <% if current_user.admin? %>
+                      <li class="dropdown">
+                      <li class=" <%='active' if current_page?(users_path) || current_page?(opinions_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Panel Admina<i class="fa fa-caret-square-o-down"></i></a>
+                        <ul class="dropdown-menu">
+                          <li class=" <%='active' if current_page?(users_path) %> "><%= link_to 'Użytkownicy', users_path %></li>
+                          <li class=" <%='active' if current_page?(opinions_path) %> "><%= link_to 'Opinie', opinions_path %></li>
+                        </ul>
+                      </li>
+                  <% end %>
+                  <li class="dropdown">
+                  <li class=" <%='active' if current_page?(edit_user_registration_path) %> "><a class="dropdown-toggle" data-toggle="dropdown" href>Konto użytkownika<i class="fa fa-caret-square-o-down"></i></a>
                     <ul class="dropdown-menu">
-                        <li class=" <%='active' if current_page?(edit_user_registration_path) %> "> <%= link_to '<i class="fa fa-pencil fa-fw"></i>Edycja'.html_safe, edit_user_registration_path %></li>
-                        <li> <%= link_to '<i class="fa fa-sign-out"></i>Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
+                      <li class=" <%='active' if current_page?(edit_user_registration_path) %> "> <%= link_to '<i class="fa fa-pencil fa-fw"></i>Edycja'.html_safe, edit_user_registration_path %></li>
+                      <li> <%= link_to '<i class="fa fa-sign-out"></i>Wyloguj mnie'.html_safe, destroy_user_session_path , :method => :delete %> </li>
                     </ul>
-                </li>
-            <% else %>
-                <li class=" <%='active' if current_page?(new_user_registration_path) %> "><a href=" <%= new_user_registration_path %> "><i class="fa fa-user fa-fw"></i>Rejestracja</a></li>
-                <li class=" <%='active' if current_page?(new_user_session_path) %> "><a href=" <%= new_user_session_path %> "><i class="fa fa-sign-in"></i>Logowanie</a></li>
-            <% end %>
+                  </li>
+              <% else %>
+                  <li class=" <%='active' if current_page?(new_user_registration_path) %> "><a href=" <%= new_user_registration_path %> "><i class="fa fa-user fa-fw"></i>Rejestracja</a></li>
+                  <li class=" <%='active' if current_page?(new_user_session_path) %> "><a href=" <%= new_user_session_path %> "><i class="fa fa-sign-in"></i>Logowanie</a></li>
+              <% end %>
 
-           </ul>
-           </div>
+            </ul>
+            </div>
 
             <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
-          <a class="navbar-brand hidden-lg hidden-md hidden-sm" href=<%= root_path %> >Borkowski Wylewki</a>
-        </div>
-        </div>
-    </nav>
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#Navbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand hidden-lg hidden-md hidden-sm" href=<%= root_path %> >Borkowski Wylewki</a>
+            </div>
+            </div>
+            </nav>
 
-</header>
+            </header>
