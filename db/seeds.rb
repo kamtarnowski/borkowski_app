@@ -36,3 +36,7 @@ end
     user.create_opinion!(content: content)
   end
 end
+
+BusinessMethod.create(title: 'Tynki Agregatem', content: Faker::Lorem.sentence(100))
+BusinessMethod.create(title: 'Wylewki Mixokrętem', content: Faker::Lorem.sentence(100))
+BusinessMethod.create(title: 'Posadzki Przemysłowe', content: Faker::Lorem.sentence(100))

@@ -1,0 +1,29 @@
+<div class="container" id="back_other">
+
+  <% if user_signed_in? && current_user.admin %>
+
+              <div class="row" id="row_next">
+
+                <p>Edycja metody:</p>
+
+                <%= simple_form_for @met_bus, remote: true do |form| %>
+
+
+
+                <% end %>
+
+              </div>
+              <hr>
+              <div class="clearfix visible-sm"></div>
+
+              <div class="row" id="row_next">
+
+              </div>
+              <hr>
+              <div class="clearfix visible-sm"></div>
+
+  <% end %>
+
+  <%= @met_bus.content %>
+
+</div>

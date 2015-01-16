@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :business_methods
+
   devise_for :users, controllers: { sessions: 'sessions' }
   resources :contacts, only: [:new, :create]
   resources :opinions

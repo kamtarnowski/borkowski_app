@@ -10,12 +10,12 @@
             <ul class="nav navbar-nav">
             <li class=" <%= 'active' if current_page?(root_path) %> "><%= link_to '<i class="fa fa-home"></i>Start'.html_safe, root_path %></li>
             <li class="dropdown">
-            <li class="<%='active' if current_page?(metoda_1_path) || current_page?(metoda_2_path) || current_page?(metoda_3_path)%>"><a class="dropdown-toggle" data-toggle="dropdown" href>Wykorzystywane metody
+            <li class="<%='active' if current_page?(metoda_1_path) || current_page?(metoda_2_path) || current_page?(metoda_3_path)%>"><a class="dropdown-toggle" data-toggle="dropdown" href>Metody działalności
               <i class="fa fa-caret-down"></i></a>
               <ul class="dropdown-menu"">
-                <li class=" <%='active' if current_page?(metoda_1_path) %> "><a href=" <%= metoda_1_path %> ">Metoda Pierwsza</a> </li>
-                <li class=" <%='active' if current_page?(metoda_2_path) %> "><a href=" <%= metoda_2_path %> ">Metoda Druga</a> </li>
-                <li class=" <%='active' if current_page?(metoda_3_path) %> "><a href=" <%= metoda_3_path %> ">Metoda Trzecia</a> </li>
+              <% BusinessMethod.all.each do |method| %>
+                <li class=" <%='active' if current_page?(business_method_path(method)) %> "><a href=" <%= business_method_path(method) %> "><%= method.title %></a> </li>
+              <% end %>
               </ul>
             <li class="<%='active' if current_page?(realizacje_path) %>"><a href=" <%= realizacje_path %> "><i class="fa fa-history"></i>Realizacje</a></li>
             <li class=" <%='active' if current_page?(contact_path) %> "><a href=" <%= contact_path %> "><i class="fa fa-envelope"></i>Kontakt</a></li>
