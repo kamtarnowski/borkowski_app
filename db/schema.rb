@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150116003717) do
+ActiveRecord::Schema.define(version: 20150116021225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,6 +21,9 @@ ActiveRecord::Schema.define(version: 20150116003717) do
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "met_title"
+    t.string   "met_description"
+    t.string   "met_keywords"
   end
 
   add_index "business_methods", ["title", "content", "created_at"], name: "index_business_methods_on_title_and_content_and_created_at", using: :btree

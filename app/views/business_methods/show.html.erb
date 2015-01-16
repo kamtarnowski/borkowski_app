@@ -1,29 +1,58 @@
+<% title @met_bus.met_title %>
+<% description @met_bus.met_description %>
+<% keywords @met_bus.met_keywords %>
+
 <div class="container" id="back_other">
 
   <% if user_signed_in? && current_user.admin %>
 
               <div class="row" id="row_next">
+                <div class="col-md-offset-1 col-md-10">
 
-                <p>Edycja metody:</p>
+                <h4>Edycja metody:</h4>
 
-                <%= simple_form_for @met_bus, remote: true do |form| %>
+                <%= simple_form_for @met_bus do |form| %>
 
+                <%= form.input :title, label: 'Tytuł:', input_html: { value: @met_bus.title }, required: true %>
+                <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @met_bus.met_title }, hint: 'Maksymalna liczba znaków: 70'  %>
+                <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @met_bus.met_description }, hint: 'Maksymalna liczba znaków: 160' %>
+                <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @met_bus.met_keywords }, hint: 'Maksymalna liczba znaków: 255'  %>
 
+                <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @met_bus.content.html_safe, rows: 20 } %>
+
+                <%= form.button :submit, 'Zatwierdź zmiany' %>
 
                 <% end %>
 
+                </div>
               </div>
+
               <hr>
               <div class="clearfix visible-sm"></div>
+
+                    <!-- IFRAME HERE -->
+                    <div class="col-md-offset-1 col-md-10">
+                      <h4>Podgląd:</h4>
+
+                        <div id="show_view" style="border: 1px solid black">
+
+
+                            <p>Kamil</p>
+                          <p>Kamil</p>
+                          <p>Kamil</p>
+
+                        </div>
+                    </div>
 
               <div class="row" id="row_next">
 
               </div>
+
               <hr>
               <div class="clearfix visible-sm"></div>
 
   <% end %>
 
-  <%= @met_bus.content %>
+  <%= @met_bus.content.html_safe %>
 
 </div>

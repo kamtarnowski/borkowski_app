@@ -8,6 +8,7 @@
 
 User.delete_all
 Opinion.delete_all
+BusinessMethod.delete_all
 
 User.create!(name: 'Kamil T',
             email: 'kam@gmail.com',
@@ -37,6 +38,6 @@ end
   end
 end
 
-BusinessMethod.create(title: 'Tynki Agregatem', content: Faker::Lorem.sentence(100))
-BusinessMethod.create(title: 'Wylewki Mixokrętem', content: Faker::Lorem.sentence(100))
-BusinessMethod.create(title: 'Posadzki Przemysłowe', content: Faker::Lorem.sentence(100))
+BusinessMethod.create(title: 'Tynki Agregatem', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
+BusinessMethod.create(title: 'Wylewki Mixokrętem', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
+BusinessMethod.create(title: 'Posadzki Przemysłowe', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
