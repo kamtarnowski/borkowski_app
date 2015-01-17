@@ -20,9 +20,10 @@
 
               <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @met_bus.content.html_safe, rows: 20 } %>
 
-              <%= form.button :submit, 'Zatwierdź zmiany' %> <%= button_to 'Kasuj metodę', @met_bus, :method => :delete, data: { confirm: 'Jesteś pewien?' }, style: 'float: right' %>
+              <%= form.button :submit, 'Zatwierdź zmiany' %>
 
           <% end %>
+          <%= button_to 'Kasuj metodę', @met_bus, :method => :delete, data: { confirm: 'Jesteś pewien?' }, style: 'float: right' %>
 
         </div>
       </div>

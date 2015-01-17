@@ -1,0 +1,38 @@
+<div class="container" id="back_other">
+
+      <div class="row" id="row_next">
+        <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
+
+          <h3>Edycja Strony głównej:</h3>
+
+          <%= simple_form_for @home_p do |form| %>
+
+              <%= form.input :title, label: 'Tytuł:', input_html: { value: @home_p.title }, required: true %>
+              <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @home_p.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
+              <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @home_p.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
+              <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @home_p.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+
+              <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @home_p.content.html_safe, rows: 20 } %>
+
+              <%= form.button :submit, 'Zatwierdź zmiany' %>
+
+          <% end %>
+
+        </div>
+      </div>
+
+      <hr>
+      <div class="clearfix visible-sm"></div>
+
+      <h3 class="col-md-offset-1">Podgląd:</h3><br>
+
+      <div id="show_view" style="border: 4px solid grey; overflow: scroll; height: 500px">
+
+      </div>
+
+      <hr>
+      <div class="clearfix visible-sm"></div>
+
+  <%= @home_p.content.html_safe %>
+
+</div>
