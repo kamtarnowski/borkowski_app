@@ -1,6 +1,6 @@
 class BusinessMethodsController < ApplicationController
-  before_action :find_method, only: [:update, :show]
-  before_action :correct_admin, only: [:update, :new, :create]
+  before_action :find_method, only: [:update, :show, :destroy]
+  before_action :correct_admin, only: [:update, :new, :create, :destroy]
 
   def new
     @met_bus = BusinessMethod.new
@@ -28,6 +28,16 @@ class BusinessMethodsController < ApplicationController
   end
 
   def show
+  end
+
+  def destroy
+    if @met_bus.delete
+      redirect_to root_path
+      flash[:notice] = 'Metoda usunięta'
+    else
+      redirect_to root_path
+      flash[:notice] = 'Operacja nieudana'
+    end
   end
 
   def find_method
