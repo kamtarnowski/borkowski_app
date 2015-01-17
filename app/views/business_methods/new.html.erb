@@ -1,0 +1,40 @@
+<div class="container" id="back_other">
+
+  <% if user_signed_in? && current_user.admin? %>
+
+      <div class="row" id="row_next">
+        <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
+
+          <h3>Stwórz nową metodę:</h3>
+
+          <%= simple_form_for @met_bus do |form| %>
+
+              <%= form.input :title, label: 'Tytuł:', required: true %>
+              <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @met_bus.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
+              <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @met_bus.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
+              <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @met_bus.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+
+              <%= form.input :content, as: :text, label: 'Treść', input_html: { rows: 20 } %>
+
+              <%= form.button :submit, 'Stwórz' %>
+
+          <% end %>
+
+        </div>
+      </div>
+
+      <hr>
+      <div class="clearfix visible-sm"></div>
+
+      <h3 class="col-md-offset-1">Podgląd:</h3><br>
+
+      <div id="show_view" style="border: 4px solid grey; overflow: scroll; height: 500px">
+
+      </div>
+
+      <hr>
+      <div class="clearfix visible-sm"></div>
+
+  <% end %>
+
+</div>

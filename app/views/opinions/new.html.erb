@@ -6,7 +6,7 @@
 
       <%= simple_form_for @opinion do |opinion| %>
 
-          <%= opinion.input :content, required: true, label: 'Treść:', input_html: { minleangth: 40, maxlength: 140, id: 'restr_area'  }, hint: 'Ilość znaków: 50 minimum, 140 maksimum' %>
+          <%= opinion.input :content, required: true, label: 'Treść:', input_html: { minleangth: 40, maxlength: 140  }, hint: 'Ilość znaków: 50 minimum, 140 maksimum' %>
 
           <%= opinion.button :submit, 'Prześlij opinię' %>
 

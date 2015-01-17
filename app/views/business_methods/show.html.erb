@@ -14,9 +14,9 @@
                 <%= simple_form_for @met_bus do |form| %>
 
                 <%= form.input :title, label: 'Tytuł:', input_html: { value: @met_bus.title }, required: true %>
-                <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @met_bus.met_title }, hint: 'Maksymalna liczba znaków: 70'  %>
-                <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @met_bus.met_description }, hint: 'Maksymalna liczba znaków: 160' %>
-                <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @met_bus.met_keywords }, hint: 'Maksymalna liczba znaków: 255'  %>
+                <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @met_bus.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
+                <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @met_bus.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
+                <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @met_bus.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
 
                 <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @met_bus.content.html_safe, rows: 20 } %>
 

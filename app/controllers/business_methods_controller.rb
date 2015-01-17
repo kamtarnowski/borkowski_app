@@ -1,9 +1,20 @@
 class BusinessMethodsController < ApplicationController
   before_action :find_method, only: [:update, :show]
-  before_action :correct_admin, only: [:update]
+  before_action :correct_admin, only: [:update, :new, :create]
 
   def new
     @met_bus = BusinessMethod.new
+  end
+
+  def create
+    @met_bus = BusinessMethod.create(method_params)
+    if @met_bus.save
+      redirect_to root_path
+      flash[:notice] = 'Metoda została stworzona'
+    else
+      render 'new'
+      flash[:notice] = 'Nie udało się utworzyć metody'
+    end
   end
 
   def update
