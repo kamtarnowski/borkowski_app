@@ -34,9 +34,9 @@
               <h4>
                   <ul>
                     <li><%= link_to 'Strona główna', root_path %></li>
-                    <li><%= link_to 'Metoda pierwsza', metoda_1_path %></li>
-                    <li><%= link_to 'Metoda druga', metoda_2_path %></li>
-                    <li><%= link_to 'Metoda trzecia', metoda_3_path %></li>
+                    <% BusinessMethod.all.each do |method| %>
+                        <li><%= link_to method.title, business_method_path(method) %></li>
+                    <% end %>
                     <li><%= link_to 'Wykonane realizacje', realizacje_path %></li>
                     <li><%= link_to 'Napisz do nas', contact_path + '#contact_link' %></li>
                   </ul>
