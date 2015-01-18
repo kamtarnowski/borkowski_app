@@ -10,6 +10,7 @@ User.delete_all
 Opinion.delete_all
 BusinessMethod.delete_all
 HomePage.delete_all
+CompanyDatum.delete_all
 
 User.create!(name: 'Kamil T',
             email: 'kam@gmail.com',
@@ -44,3 +45,5 @@ BusinessMethod.create(title: 'Wylewki Mixokrętem', content: Faker::Lorem.senten
 BusinessMethod.create(title: 'Posadzki Przemysłowe', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
 
 HomePage.create(title: 'Start', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
+
+CompanyDatum.create(title: 'Kontakt', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10), name: Faker::Company.name, address: Faker::Address.street_address, email: Faker::Internet.email, phone: Faker::PhoneNumber.phone_number, mob_phone: Faker::PhoneNumber.cell_phone)

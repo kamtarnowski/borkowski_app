@@ -1,0 +1,43 @@
+<div class="container" id="back_other">
+
+  <div class="row" id="row_next">
+    <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
+
+      <h3>Edycja Danych firmy:</h3>
+
+      <%= simple_form_for @com_data do |form| %>
+
+          <%= form.input :title, label: 'Tytuł:', input_html: { value: @com_data.title }, required: true %>
+          <%= form.input :name, label: 'Nazwa firmy:', input_html: { value: @com_data.name } %>
+          <%= form.input :address, label: 'Pełny adres:', input_html: { value: @com_data.address } %>
+          <%= form.input :email, label: 'Email firmowy:', as: :email, input_html: { value: @com_data.email } %>
+          <%= form.input :phone, label: 'Telefon(stac):', as: :tel, input_html: { value: @com_data.phone } %>
+          <%= form.input :mob_phone, label: 'Telefon(mob):', as: :tel, input_html: { value: @com_data.mob_phone } %>
+          <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @com_data.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
+          <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @com_data.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
+          <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @com_data.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+
+          <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @com_data.content.html_safe, rows: 20 } %>
+
+          <%= form.button :submit, 'Zatwierdź zmiany' %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <hr>
+  <div class="clearfix visible-sm"></div>
+
+  <h3 class="col-md-offset-1">Podgląd:</h3><br>
+
+  <div id="show_view" style="border: 4px solid grey; overflow: scroll; height: 500px">
+
+  </div>
+
+  <hr>
+  <div class="clearfix visible-sm"></div>
+
+  <%= @com_data.content.html_safe %>
+
+</div>

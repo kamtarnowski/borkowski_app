@@ -69,9 +69,8 @@
               <h4>Adres firmy:<br><br></h4>
                 <address>
                     <h5>
-                      Borkowski Wylewki<br><br>
-                      ul. Krakowska 5/80<br>
-                      Osiek 30-215<br>
+                      <%= CompanyDatum.find(1).name.html_safe %><br><br>
+                      <%= CompanyDatum.find(1).address.html_safe %><br>
 
                     </h5>
                 </address>
@@ -82,9 +81,9 @@
                 <address>
                    <h5>
 
-                    <%= link_to "wylewki@gmail.com", 'mailto:wylewki@gmail.com', style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
-                    tel: 15865922<br>
-                    t.kom: 508223442<br><br>
+                    <%= link_to CompanyDatum.find(1).email.html_safe, 'mailto:' + CompanyDatum.find(1).email, style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
+                     <%= CompanyDatum.find(1).phone %><br>
+                     <%= CompanyDatum.find(1).mob_phone %><br><br>
 
                    </h5>
                 </address>
