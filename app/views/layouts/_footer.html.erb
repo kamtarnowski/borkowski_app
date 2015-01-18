@@ -28,9 +28,9 @@
       <% end %>
 
       <div class="row" id="row_foot">
-        <div class="col-sm-4 col-lg-offset-1 col-lg-5">
+        <div class="col-xs-12 col-md-6">
           <div class="row" id="row_f_left">
-            <div class="col-xs-5 col-sm-12 col-lg-6">
+            <div class="col-xs-6 col-xs-offset-1 col-md-6">
               <h4>
                   <ul>
                     <li><%= link_to 'Strona główna', root_path %></li>
@@ -43,9 +43,10 @@
               </h4>
             </div>
 
-            <div class="col-xs-6 col-sm-12 col-lg-6">
+            <div class="col-xs-5 col-md-5">
               <h4>
-                <ul>
+
+                <ul style="padding-left: 0">
                   <li><%= link_to "Zarejestruj się", new_user_registration_path %></li>
                   <li><%= link_to "Logowanie", new_user_session_path %></li>
                   <li><%= link_to "Napisz opinię o nas", new_opinion_path %></li>
@@ -55,39 +56,38 @@
 
                 <br>
 
-
-
               </h4>
             </div>
           </div>
         </div>
 
-        <div class="clearfix visible-sm"></div>
-          <hr class='row hidden-lg hidden-md'>
+        <div class="col-md-5 col-xs-12">
+            <hr class='row hidden-lg hidden-md'>
 
-            <div class="col-xs-5 col-sm-4 col-lg-2" style="padding-left: 45px">
-              <h4>Adres firmy:<br><br></h4>
-                <address>
+                <div class="col-xs-offset-1 col-xs-4 col-md-5"">
+                  <h4>Adres firmy:<br><br></h4>
+                  <address>
                     <h5>
                       <%= CompanyDatum.find(1).name.html_safe %><br><br>
                       <%= CompanyDatum.find(1).address.html_safe %><br>
 
                     </h5>
-                </address>
-            </div>
+                  </address>
+                </div>
 
-            <div class="col-xs-5 col-sm-4 col-lg-3" style="padding-left: 30px">
-              <h4>Informacje kontaktowe:<br><br></h4>
-                <address>
-                   <h5>
+                <div class="col-xs-6 col-md-6"">
+                    <h4>Informacje kontaktowe:<br><br></h4>
+                    <address>
+                      <h5>
 
-                    <%= link_to CompanyDatum.find(1).email.html_safe, 'mailto:' + CompanyDatum.find(1).email, style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
-                     <%= CompanyDatum.find(1).phone %><br>
-                     <%= CompanyDatum.find(1).mob_phone %><br><br>
+                        <%= link_to CompanyDatum.find(1).email.html_safe, 'mailto:' + CompanyDatum.find(1).email, style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
+                        <%= CompanyDatum.find(1).phone %><br>
+                        <%= CompanyDatum.find(1).mob_phone %><br><br>
 
-                   </h5>
-                </address>
-            </div>
+                      </h5>
+                    </address>
+                </div>
+        </div>
       </div>
 
       <div class="row" id="author">
