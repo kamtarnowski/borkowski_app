@@ -17,7 +17,7 @@
 
             <ul class="dropdown-menu"">
             <% BusinessMethod.all.each do |method| %>
-                <li class=" <%='active' if current_page?(business_method_path(method)) %> "><a href=" <%= business_method_path(method) %> "><b><%= method.title %></b></a> </li>
+                <li class=" <%='active' if current_page?(business_method_path(method)) %> "><a href=" <%= business_method_path(method) %> "><%= method.title.html_safe %></a> </li>
             <% end %>
             </ul>
 
