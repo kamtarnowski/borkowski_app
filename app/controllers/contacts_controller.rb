@@ -1,6 +1,7 @@
 class ContactsController < ApplicationController
   def new
     @contact = Contact.new
+    @com_data = CompanyDatum.find(1)
   end
 
   def create

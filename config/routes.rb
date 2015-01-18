@@ -1,10 +1,9 @@
 Rails.application.routes.draw do
 
-  resources :company_data
-
   devise_for :users, controllers: { sessions: 'sessions' }
   resources :contacts, only: [:new, :create]
   resources :opinions
+  resources :company_data, only: [:edit, :update]
   resources :business_methods, only: [:new, :create, :update, :destroy, :show]
   resources :home_pages, only: [:edit, :update]
   root 'static_pages#home'
