@@ -20,7 +20,7 @@ class HomePagesController < ApplicationController
 
   def home_params
     params.require(:home_page).permit(:title, :content,
-                                      :met_title, :met_description, :met_keywords)
+                                      :met_title, :met_description, :met_keywords, :carousel)
   end
 
 end

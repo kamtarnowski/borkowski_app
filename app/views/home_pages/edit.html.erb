@@ -11,8 +11,12 @@
               <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @home_p.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
               <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @home_p.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
               <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @home_p.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+              <button type="button" class="btn btn-default" id="hide_button">Slajdy</button>
+              <div id="carousel_content" style="display: none">
+                    <%= form.input :carousel, input_html: { value: @home_p.carousel, rows: 5 } %>
+              </div>
 
-              <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @home_p.content.html_safe, rows: 20 } %>
+              <%= form.input :content, as: :text, label: 'Treść:', input_html: { value: @home_p.content.html_safe, rows: 20 } %>
 
               <%= form.button :submit, 'Zatwierdź zmiany' %>
 

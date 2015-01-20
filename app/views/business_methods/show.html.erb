@@ -18,7 +18,7 @@
               <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @met_bus.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
               <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @met_bus.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
 
-              <%= form.input :content, as: :text, label: 'Treść', input_html: { value: @met_bus.content.html_safe, rows: 20 } %>
+              <%= form.input :content, as: :text, label: 'Treść:', input_html: { value: @met_bus.content.html_safe, rows: 20 } %>
 
               <%= form.button :submit, 'Zatwierdź zmiany' %>
 

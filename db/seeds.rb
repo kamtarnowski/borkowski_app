@@ -44,6 +44,9 @@ BusinessMethod.create(title: 'Tynki Agregatem', content: Faker::Lorem.sentence(1
 BusinessMethod.create(title: 'Wylewki Mixokrętem', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
 BusinessMethod.create(title: 'Posadzki Przemysłowe', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
 
-HomePage.create(title: 'Start', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))
+HomePage.create(title: 'Start', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10), carousel:
+    '<div class="item"><img src="assets/lion_27-wallpaper-1366x768.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="assets/the_book_of_life_2014-wallpaper-1366x768.jpg" alt="Owl Image"></div>
+  <div class="item"><img src="assets/vector_lion-wallpaper-1366x768.jpg" alt="Owl Image"></div>')
 
 CompanyDatum.create(title: 'Kontakt', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10), name: Faker::Company.name, address: Faker::Address.street_address, email: Faker::Internet.email, phone: Faker::PhoneNumber.phone_number, mob_phone: Faker::PhoneNumber.cell_phone)

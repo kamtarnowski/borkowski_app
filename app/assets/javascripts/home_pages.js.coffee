@@ -4,3 +4,6 @@
 $ ->
   $('#home_page_content').keyup ->
     $('#show_view').html($(this).val())
+
+  $('#hide_button').click ->
+    $('#carousel_content').toggle()

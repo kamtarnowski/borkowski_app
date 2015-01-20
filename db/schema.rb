@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150117223117) do
+ActiveRecord::Schema.define(version: 20150120223208) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,6 +53,7 @@ ActiveRecord::Schema.define(version: 20150117223117) do
     t.string   "met_keywords"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "carousel"
   end
 
   add_index "home_pages", ["title", "content", "created_at"], name: "index_home_pages_on_title_and_content_and_created_at", using: :btree
