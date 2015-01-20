@@ -45,23 +45,6 @@ ActiveRecord::Schema.define(version: 20150117223117) do
 
   add_index "company_data", ["title", "content", "created_at"], name: "index_company_data_on_title_and_content_and_created_at", using: :btree
 
-  create_table "contacts", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.string   "name"
-    t.string   "address"
-    t.string   "email"
-    t.integer  "phone"
-    t.integer  "mob_phone"
-    t.string   "met_title"
-    t.string   "met_description"
-    t.string   "met_keywords"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "contacts", ["title", "content", "created_at"], name: "index_contacts_on_title_and_content_and_created_at", using: :btree
-
   create_table "home_pages", force: true do |t|
     t.string   "title"
     t.text     "content"
@@ -73,13 +56,6 @@ ActiveRecord::Schema.define(version: 20150117223117) do
   end
 
   add_index "home_pages", ["title", "content", "created_at"], name: "index_home_pages_on_title_and_content_and_created_at", using: :btree
-
-  create_table "methods_of_businesses", force: true do |t|
-    t.string   "title"
-    t.text     "content"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "opinions", force: true do |t|
     t.text     "content"

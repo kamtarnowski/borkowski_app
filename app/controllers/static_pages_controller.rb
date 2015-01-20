@@ -10,13 +10,4 @@ class StaticPagesController < ApplicationController
   def realizacje
   end
 
-  def metoda_1
-  end
-
-  def metoda_2
-  end
-
-  def metoda_3
-  end
-
 end

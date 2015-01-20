@@ -137,11 +137,32 @@ body {
   background-color: white;
   position: relative;
   top: -50px;
-  z-index: -111;
 }
 
-h3 {
-  letter-spacing: 1px;
+.dtitle {
+  background-color: lightgray;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  text-align: center;
+}
+
+.htitle {
+  color: white;
+  padding: 10px;
+  -webkit-transition: color 2s;
+  transition: color 2s;
+}
+
+.htitle:hover {
+  color: black;
+  text-decoration: none;
+}
+
+.htitle:active {
+  text-decoration: none;
 }
 
 #back_other {

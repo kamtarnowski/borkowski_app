@@ -11,8 +11,5 @@ Rails.application.routes.draw do
   get '/users'        => 'users#index'
   get '/contact'      => 'contacts#new'
   get '/realizacje'   => 'static_pages#realizacje'
-  get '/metoda_1'     => 'static_pages#metoda_1'
-  get '/metoda_2'     => 'static_pages#metoda_2'
-  get '/metoda_3'     => 'static_pages#metoda_3'
 
 end
