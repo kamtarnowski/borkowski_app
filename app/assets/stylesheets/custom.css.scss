@@ -23,7 +23,7 @@ body {
   background-size: 3px 100%;
   background-position: 0 0, 100% 0;
   background-repeat: no-repeat;
-  z-index: -111;
+  z-index: 0;
   padding-left: 3px;
   padding-right: 3px;
 }
@@ -31,7 +31,7 @@ body {
 #logo_image {
   max-width: 100%;
   high: auto;
-  z-index: -222;
+  z-index: 0;
 }
 
 .navbar-inverse {
@@ -177,7 +177,7 @@ body {
   background-repeat: no-repeat;
 
   background-color: white;
-  z-index: -111;
+  z-index: 0;
 }
 
 #row1st {
