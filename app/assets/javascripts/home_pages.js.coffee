@@ -7,3 +7,6 @@ $ ->
 
   $('#hide_button').click ->
     $('#carousel_content').toggle()
+
+  $('.meta_button_home').click ->
+    $('#meta_tags').toggle()

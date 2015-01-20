@@ -8,9 +8,12 @@
           <%= simple_form_for @home_p do |form| %>
 
               <%= form.input :title, label: 'Tytuł:', input_html: { value: @home_p.title }, required: true %>
+              <button type="button" class="btn btn-default meta_button_home">Meta tagi</button>
+              <div id="meta_tags" style="display: none">
               <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @home_p.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
               <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @home_p.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
               <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @home_p.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+              </div>
               <button type="button" class="btn btn-default" id="hide_button">Slajdy</button>
               <div id="carousel_content" style="display: none">
                     <%= form.input :carousel, input_html: { value: @home_p.carousel, rows: 5 } %>

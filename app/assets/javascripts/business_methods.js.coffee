@@ -4,3 +4,6 @@
 $ ->
   $('#business_method_content').keyup ->
     $('#show_view').html($(this).val())
+
+  $('.meta_button_bus').click ->
+    $('#meta_tags').toggle()
