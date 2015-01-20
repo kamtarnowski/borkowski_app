@@ -250,3 +250,21 @@ h4 {
   right: 45px;
   top: 40%;
 }
+
+#button_up {
+  background-color: lightgrey;
+  display: none;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  position: fixed;
+  right: 50px;
+  bottom: 100px;
+  z-index: 777;
+  padding: 10px;
+}
+
+#button_up:hover {
+  background-color: darkgrey;
+  cursor: pointer;
+}

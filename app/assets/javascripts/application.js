@@ -21,3 +21,15 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+    $(window).scroll(function() {
+        if($(window).scrollTop() + $(window).height() > $(document).height() * 0.75) {
+            $('#button_up').show().click(function(){
+                $('html, body').scrollTop(0);
+                return false;
+            });
+        }
+        else {
+            $('#button_up').hide();
+        }
+    });
