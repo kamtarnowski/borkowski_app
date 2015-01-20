@@ -2,7 +2,7 @@
 default: &default
   adapter: postgresql
   encoding: utf-8
-  port: 5433
+  port: 5432
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: 5
@@ -11,13 +11,13 @@ default: &default
 development:
   <<: *default
   username: postgres
-  password: szakal007
+  password: <%= ENV['PG_PASSWORD'] %>
   database: borkowski_app_development
 
 test:
   <<: *default
   username: postgres
-  password: szakal007
+  password: <%= ENV['PG_PASSWORD'] %>
   database: borkowski_app_test
 
 production:
