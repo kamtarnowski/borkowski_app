@@ -22,6 +22,7 @@
 //= require bootstrap-sprockets
 //= require_tree .
 
+$(document).ready(function(){
     $(window).scroll(function() {
         if($(window).scrollTop() + $(window).height() > $(document).height() * 0.75) {
             $('#button_up').show().click(function(){
@@ -33,3 +34,5 @@
             $('#button_up').hide();
         }
     });
+    $('.gritter-item').css('font-size', '16px');
+});
