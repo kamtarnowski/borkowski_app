@@ -26,6 +26,9 @@ gem 'will_paginate'
 gem 'will_paginate-bootstrap'
 gem 'gmaps4rails'
 gem 'underscore-rails'
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
+gem 'nokogiri'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
