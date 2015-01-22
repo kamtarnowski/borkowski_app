@@ -29,6 +29,7 @@ gem 'underscore-rails'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk'
 gem 'nokogiri'
+gem 'blueimp-gallery'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'

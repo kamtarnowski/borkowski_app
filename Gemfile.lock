@@ -36,6 +36,8 @@ GEM
       json (~> 1.4)
       nokogiri (>= 1.4.4)
     bcrypt (3.1.9)
+    blueimp-gallery (2.11.0.1)
+      railties (>= 3.1.0)
     bootstrap-sass (3.3.3)
       autoprefixer-rails (>= 5.0.0.1)
       sass (>= 3.2.19)
@@ -205,6 +207,7 @@ PLATFORMS
 DEPENDENCIES
   autoprefixer-rails
   aws-sdk
+  blueimp-gallery
   bootstrap-sass
   coffee-rails (~> 4.0.0)
   devise

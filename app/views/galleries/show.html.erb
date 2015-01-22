@@ -1,0 +1,39 @@
+<% title @gallery.met_title %>
+<% description @gallery.met_description %>
+<% keywords @gallery.met_keywords %>
+
+<div class="container" id="back_other">
+
+  <%= @gallery.content_top %>
+
+  <div class="row" id="row_next">
+    <div class="col-sm-offset-1 col-sm-10 col-lg-offset-1 col-lg-10">
+
+            <div id="blueimp-gallery" class="blueimp-gallery">
+              <div class="slides"></div>
+              <h3 class="title"></h3>
+              <a class="prev">‹</a>
+              <a class="next">›</a>
+              <a class="close">×</a>
+              <a class="play-pause"></a>
+              <ol class="indicator"></ol>
+            </div>
+
+            <div id="links">
+              <a href="images/photo1.jpg" title="Photo 1">
+                <img src="images/thumb_photo1.jpg" alt="Photo 1">
+              </a>
+              <a href="images/photo2.jpg" title="Photo 2">
+                <img src="images/thumb_photo2.jpg" alt="Photo 2">
+              </a>
+              <a href="images/photo3.jpg" title="Photo 3">
+                <img src="images/thumb_photo3.jpg" alt="Photo 3">
+              </a>
+            </div>
+
+    </div>
+  </div>
+
+  <%= @gallery.content_bottom %>
+
+</div>

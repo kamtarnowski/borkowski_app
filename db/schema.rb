@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150120233601) do
+ActiveRecord::Schema.define(version: 20150122153138) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,6 +44,18 @@ ActiveRecord::Schema.define(version: 20150120233601) do
   end
 
   add_index "company_data", ["title", "content", "created_at"], name: "index_company_data_on_title_and_content_and_created_at", using: :btree
+
+  create_table "galleries", force: true do |t|
+    t.string   "title"
+    t.string   "met_title"
+    t.string   "met_description"
+    t.string   "met_keywords"
+    t.text     "content_top"
+    t.text     "content_bottom"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "title_footer"
+  end
 
   create_table "home_pages", force: true do |t|
     t.string   "title"

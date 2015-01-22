@@ -1,0 +1,29 @@
+<div class="container" id="back_other">
+
+  <div class="row" id="row_next">
+    <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
+
+      <h3>Edycja Galerii:</h3>
+
+      <%= simple_form_for @gallery do |form| %>
+
+          <%= form.input :title, label: 'Tytuł:', input_html: { value: @gallery.title }, required: true %>
+          <%= form.input :title_footer, label: 'Tytuł w stopce:', input_html: { value: @gallery.title_footer }, required: true %>
+          <button type="button" class="btn btn-default meta_button_gallery">Meta tagi</button>
+          <div id="meta_tags" style="display: none">
+            <%= form.input :met_title, label: 'Meta tytuł:', input_html: { value: @gallery.met_title, maxlength: 70 }, hint: 'Maksymalna liczba znaków: 70'  %>
+            <%= form.input :met_description, label: 'Meta opis:', input_html: { value: @gallery.met_description, maxlength: 160 }, hint: 'Maksymalna liczba znaków: 160' %>
+            <%= form.input :met_keywords, label: 'Meta słowa kluczowe:', input_html: { value: @gallery.met_keywords, maxlength: 255 }, hint: 'Maksymalna liczba znaków: 255'  %>
+          </div>
+
+          <%= @gallery.content_top.present? ? (form.input :content_top, as: :text, label: 'Treść górna:', input_html: { value: @gallery.content_top.html_safe, rows: 3 }) : (form.input :content_top, as: :text, label: 'Treść górna:', input_html: { rows: 3 }) %>
+          <%= @gallery.content_bottom.present? ? (form.input :content_bottom, as: :text, label: 'Treść górna:', input_html: { value: @gallery.content_bottom.html_safe, rows: 3 }) : (form.input :content_bottom, as: :text, label: 'Treść górna:', input_html: { rows: 3 }) %>
+
+          <br>
+          <%= form.button :submit, 'Zatwierdź zmiany' %>
+
+      <% end %>
+
+    </div>
+  </div>
+</div>

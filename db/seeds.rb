@@ -11,6 +11,7 @@ Opinion.delete_all
 BusinessMethod.delete_all
 HomePage.delete_all
 CompanyDatum.delete_all
+Gallery.delete_all
 
 User.create!(name: 'Kamil T',
             email: 'kam@gmail.com',
@@ -50,3 +51,5 @@ HomePage.create(title: 'Start', content: Faker::Lorem.sentence(100), met_title: 
   <div class="item"><img src="assets/vector_lion-wallpaper-1366x768.jpg" alt="Owl Image"></div>')
 
 CompanyDatum.create(title: 'Kontakt', content: Faker::Lorem.sentence(100), met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10), name: Faker::Company.name, address: Faker::Address.street_address, email: Faker::Internet.email, phone: Faker::PhoneNumber.phone_number, mob_phone: Faker::PhoneNumber.cell_phone)
+
+Gallery.create(title: 'Galeria', title_footer: 'Galeria Fotograficzna', met_title: Faker::Lorem.sentence(3), met_description: Faker::Lorem.sentence(5), met_keywords: Faker::Lorem.sentence(10))

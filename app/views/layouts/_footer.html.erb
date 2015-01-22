@@ -33,11 +33,11 @@
             <div class="col-xs-6 col-xs-offset-1 col-md-6" style="margin-left: 10px">
               <h4>
                   <ul>
-                    <li><%= link_to 'Strona główna', root_path %></li>
+                    <li><%= link_to 'Strona Główna', root_path %></li>
                     <% BusinessMethod.all.each do |method| %>
                         <li><%= link_to method.title, business_method_path(method) %></li>
                     <% end %>
-                    <li><%= link_to 'Wykonane realizacje', realizacje_path %></li>
+                    <li><%= link_to Gallery.find(1).title_footer, gallery_path(Gallery.find(1)) %></li>
                     <li><%= link_to 'Napisz do nas', contact_path + '#contact_link' %></li>
                   </ul>
               </h4>

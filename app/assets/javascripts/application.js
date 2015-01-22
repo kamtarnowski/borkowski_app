@@ -21,6 +21,7 @@
 //= require turbolinks
 //= require underscore
 //= require gmaps/google
+//= require blueimp-gallery-all
 //= require bootstrap-sprockets
 //= require_tree .
 

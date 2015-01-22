@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   resources :company_data, only: [:edit, :update]
   resources :business_methods, only: [:new, :create, :update, :destroy, :show]
   resources :home_pages, only: [:edit, :update]
+  resources :galleries, only: [:edit, :update, :show]
   delete 'users/:id'  => 'users#destroy', :as => :admin_destroy_user
   get '/users'        => 'users#index'
   get '/contact'      => 'contacts#new'
-  get '/realizacje'   => 'static_pages#realizacje'
 
 end
