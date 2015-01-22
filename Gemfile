@@ -24,6 +24,8 @@ gem 'faker'
 gem "jquery-validation-rails"
 gem 'will_paginate'
 gem 'will_paginate-bootstrap'
+gem 'gmaps4rails'
+gem 'underscore-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.0'
