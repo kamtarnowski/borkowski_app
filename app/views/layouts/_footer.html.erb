@@ -65,6 +65,7 @@
         <div class="col-md-6 col-xs-12">
             <hr class='row hidden-lg hidden-md'>
 
+
                 <div class="col-xs-offset-1 col-xs-4 col-md-5" style="margin-left: 10px">
                   <h4>Adres firmy:<br><br></h4>
                   <address>
@@ -77,17 +78,21 @@
                 </div>
 
                 <div class="col-xs-5 col-md-5">
+
+                  <strong>
                     <h4>Informacje kontaktowe:<br><br></h4>
                     <address>
                       <h5>
 
                         <%= link_to CompanyDatum.find(1).email.html_safe, 'mailto:' + CompanyDatum.find(1).email, style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
+                        <%= CompanyDatum.find(1).mob_phone %><br>
                         <%= CompanyDatum.find(1).phone %><br>
-                        <%= CompanyDatum.find(1).mob_phone %><br><br>
 
+                </strong>
                       </h5>
                     </address>
                 </div>
+
         </div>
       </div>
 
