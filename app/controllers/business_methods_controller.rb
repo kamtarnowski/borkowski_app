@@ -31,7 +31,7 @@ class BusinessMethodsController < ApplicationController
   end
 
   def destroy
-    if @met_bus.delete
+    if @met_bus.destroy
       redirect_to root_path
       flash[:notice] = 'Metoda usunięta'
     else

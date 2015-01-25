@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root 'static_pages#home'
   devise_for :users, controllers: { sessions: 'sessions' }
   resources :contacts, only: [:new, :create]
@@ -8,7 +9,9 @@ Rails.application.routes.draw do
   resources :business_methods, only: [:new, :create, :update, :destroy, :show]
   resources :home_pages, only: [:edit, :update]
   resources :galleries, only: [:edit, :update, :show]
-  delete 'users/:id'  => 'users#destroy', :as => :admin_destroy_user
+  resources :gallery_contents, only: [:create, :destroy]
+  delete 'gallery_contents/:id' => 'gallery_contents#destroy', as: :delete_gallery
+  delete 'users/:id'  => 'users#destroy', as: :admin_destroy_user
   get '/users'        => 'users#index'
   get '/contact'      => 'contacts#new'
 

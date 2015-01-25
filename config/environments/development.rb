@@ -1,5 +1,6 @@
 Rails.application.configure do
   Paperclip.options[:command_path] = "/usr/bin/"
+  Paperclip::Attachment.default_options[:s3_host_name] = 's3.eu-central-1.amazonaws.com'
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
   # Settings specified here will take precedence over those in config/application.rb.
 

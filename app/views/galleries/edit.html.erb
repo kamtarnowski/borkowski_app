@@ -3,7 +3,7 @@
   <div class="row" id="row_next">
     <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
 
-      <h3>Edycja Galerii:</h3>
+      <h3>Edycja galerii:</h3>
 
       <%= simple_form_for @gallery do |form| %>
 
@@ -21,6 +21,23 @@
 
           <br>
           <%= form.button :submit, 'Zatwierdź zmiany' %>
+
+      <% end %>
+
+    </div>
+  </div>
+
+  <div class="row" id="row_next">
+    <div class="col-md-offset-1 col-md-10" style="background-color: lightgray">
+
+      <h3>Dodanie zdjęcia:</h3>
+
+      <%= simple_form_for @gal_cont do |form| %>
+
+      <%= form.input :name, label: 'Krótki opis zdjęcia:' %>
+      <%= form.input :image, as: :file, label: 'Wybierz zdjęcie do dodania:' %>
+
+      <%= form.button :submit, 'Wyślij' %>
 
       <% end %>
 

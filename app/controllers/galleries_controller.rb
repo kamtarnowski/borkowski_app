@@ -1,8 +1,9 @@
 class GalleriesController < ApplicationController
-  before_action :correct_admin
+  before_action :correct_admin, only: [:edit, :update]
   before_action :correct_gallery
 
   def edit
+    @gal_cont = GalleryContent.new
   end
 
   def update

@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def destroy
     @user = User.find(params[:id])
     if @user.destroy
-      redirect_to request.referrer || root_url, notice: "User deleted."
+      redirect_to request.referrer || root_url, notice: "Użytkownik usunięty."
     end
   end
 

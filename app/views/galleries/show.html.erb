@@ -9,27 +9,30 @@
   <div class="row" id="row_next">
     <div class="col-sm-offset-1 col-sm-10 col-lg-offset-1 col-lg-10">
 
-            <div id="blueimp-gallery" class="blueimp-gallery">
-              <div class="slides"></div>
-              <h3 class="title"></h3>
-              <a class="prev">‹</a>
-              <a class="next">›</a>
-              <a class="close">×</a>
-              <a class="play-pause"></a>
-              <ol class="indicator"></ol>
-            </div>
+      <h2>Galeria</h2>
 
-            <div id="links">
-              <a href="images/photo1.jpg" title="Photo 1">
-                <img src="images/thumb_photo1.jpg" alt="Photo 1">
-              </a>
-              <a href="images/photo2.jpg" title="Photo 2">
-                <img src="images/thumb_photo2.jpg" alt="Photo 2">
-              </a>
-              <a href="images/photo3.jpg" title="Photo 3">
-                <img src="images/thumb_photo3.jpg" alt="Photo 3">
-              </a>
-            </div>
+      <div id="blueimp-gallery" class="blueimp-gallery">
+        <div class="slides"></div>
+        <h3 class="title"></h3>
+        <a class="prev">‹</a>
+        <a class="next">›</a>
+        <a class="close">×</a>
+        <a class="play-pause"></a>
+        <ol class="indicator"></ol>
+      </div>
+
+      <div id="links" class="links" style="text-align: center; margin-top: 30px">
+        <% GalleryContent.all.each do |image| %>
+            <a href="<%= image.image.url(:medium) %>" title="<%= image.name %>">
+              <img src="<%= image.image.url(:square) %>" alt="<%= image.id %>" class="gallery_cont_images">
+            </a>
+            <% if user_signed_in? %>
+                <% if current_user.admin? %>
+                    <%= link_to '<i class="fa fa-times fa-2x"></i>'.html_safe, delete_gallery_path(image), class: 'gallery_button', method: :delete %>
+                <% end %>
+            <% end %>
+        <% end %>
+      </div>
 
     </div>
   </div>
@@ -37,3 +40,14 @@
   <%= @gallery.content_bottom %>
 
 </div>
+
+<script>
+    document.getElementById('links').onclick = function (event) {
+        event = event || window.event;
+        var target = event.target || event.srcElement,
+                link = target.src ? target.parentNode : target,
+                options = {index: link, event: event},
+                links = this.getElementsByTagName('a');
+        blueimp.Gallery(links, options);
+    };
+</script>
