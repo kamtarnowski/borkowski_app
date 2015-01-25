@@ -8,7 +8,7 @@ class GalleryContentsController < ApplicationController
       redirect_to request.referrer
     else
       flash[:notice]= 'Niepowodzenie.'
-      render 'galleries/edit'
+      redirect_to request.referrer
     end
   end
 

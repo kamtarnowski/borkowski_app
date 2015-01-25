@@ -5,6 +5,10 @@ class ApplicationController < ActionController::Base
 
   before_action :configure_devise_perm_parm, if: :devise_controller?
 
+  def after_sign_out_path_for(resource)
+    request.env['omniauth.origin'] || request.referrer || root_path
+  end
+
   private
 
   def correct_admin
