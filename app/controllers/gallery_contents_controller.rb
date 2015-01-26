@@ -17,9 +17,10 @@ class GalleryContentsController < ApplicationController
     if @gal_cont.destroy
       flash[:notice] = 'Usunięto zdjęcie.'
       redirect_to request.referrer
-    end
+    else
       flash[:notice] = 'Niepowodzenie.'
       render 'galleries/show'
+    end
   end
 
   private
