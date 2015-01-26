@@ -14,7 +14,7 @@ class GalleryContentsController < ApplicationController
 
   def destroy
     @gal_cont = GalleryContent.find(params[:id])
-    if @gal_cunt.destroy
+    if @gal_cont.destroy
       flash[:notice] = 'Usunięto zdjęcie.'
       redirect_to request.referrer
     end
