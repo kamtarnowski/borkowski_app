@@ -295,3 +295,19 @@ h4 {
   -moz-border-radius: 15px;
   border-radius: 15px;
 }
+
+#facebook-container {
+  position: fixed;
+  z-index: 999;
+  right: -310px;
+  top: 30%;
+  width: 370px;
+  hight: auto;
+  background-color: transparent;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+#facebook-container:hover {
+  right: 0;
+}

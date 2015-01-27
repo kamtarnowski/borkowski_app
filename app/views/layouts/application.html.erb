@@ -21,6 +21,13 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
 
+    <div id="fb-root"></div>
+    <div id="facebook-container">
+
+      <div style="display: inline"><i class="fa fa-facebook-square fa-5x" style="color: #3b5998"></i></div>
+      <div style="display: inline" class="fb-like" data-href="https://www.facebook.com/BorkowskiWylewki?fref=ts" data-width="300" data-layout="standard" data-action="like" data-show-faces="true" data-share="true"></div>
+
+    </div>
     <%= debug(params) if Rails.env.development? %>
     <div id='button_up'><i class="fa fa-angle-double-up fa-3x"></i></div>
 
@@ -39,6 +46,22 @@
         <% flash.each do |key, value| %>
         <%= add_gritter(value, flash[key], :image => :notice, :title => 'Komunikat:', nodom_wrap: true) %>
         <% end %>
+
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '708808135883180',
+                xfbml      : true,
+                version    : 'v2.2'
+            });
+        };
+
+        (function(d, s, id){
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) {return;}
+            js = d.createElement(s); js.id = id;
+            js.src = "//connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
 
     </script>
 
