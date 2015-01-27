@@ -45,11 +45,11 @@ $(document).ready(function(){
                 "lat": 50.4296549,
                 "lng": 21.2828111,
                 "picture": {
-                    "image": "marker_google_maps.png",
+                    "image": "https://s3.eu-central-1.amazonaws.com/borkowski/layout/marker_google_maps.png",
                     "width":  36,
                     "height": 36,
                 },
-                "infowindow": "ul. Kościuszki 35, 28-230 Połaniec",
+                "infowindow": "Krzysztof Borkowski ul. Kościuszki 35, 28-230 Połaniec",
             }
         ]);
         handler.bounds.extendWith(markers);
