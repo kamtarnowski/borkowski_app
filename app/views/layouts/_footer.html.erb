@@ -30,9 +30,9 @@
       <div class="row" id="row_foot">
         <div class="col-xs-12 col-md-6">
           <div class="row" id="row_f_left">
-            <div class="col-xs-6 col-xs-offset-1 col-md-6" style="margin-left: 10px">
+            <div class="col-xs-6 col-md-5 col-md-offset-1" style="padding-right: 0">
               <h4>
-                  <ul>
+                  <ul style="padding-left: 0">
                     <li><%= link_to 'Strona Główna', root_path %></li>
                     <% BusinessMethod.all.each do |method| %>
                         <li><%= link_to method.title, business_method_path(method) %></li>
