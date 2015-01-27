@@ -282,6 +282,7 @@ h4 {
 #button_up:hover {
   background-color: darkgrey;
   cursor: pointer;
+  border: solid orange 1px;
 }
 
 .gallery_button {
@@ -304,8 +305,8 @@ h4 {
   width: 370px;
   hight: auto;
   background-color: transparent;
-  -webkit-transition: 1.5s;
-  transition: 1.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
 }
 
 #facebook-container:hover {

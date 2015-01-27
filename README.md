@@ -1,6 +1,6 @@
 Issues & further improvements:
 
-- Facebook API  
+- col-md 
 - gallery  
 - meta tags on each page  
 - tests  
