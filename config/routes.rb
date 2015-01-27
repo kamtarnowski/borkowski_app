@@ -14,5 +14,6 @@ Rails.application.routes.draw do
   delete 'users/:id'  => 'users#destroy', as: :admin_destroy_user
   get '/users'        => 'users#index'
   get '/contact'      => 'contacts#new'
+  post '/'            => 'static_pages#event_cookies', as: :cookies_deploy
 
 end

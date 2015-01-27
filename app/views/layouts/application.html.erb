@@ -24,6 +24,16 @@
     <%= debug(params) if Rails.env.development? %>
     <div id='button_up'><i class="fa fa-angle-double-up fa-3x"></i></div>
 
+    <% unless cookies[:maintain_borkowski] == 'TRUE' %>
+
+        <div id="cookies"> Korzystając z serwisu wyrażasz zgodę na wykorzystanie przez nas plików cookies, w celu zapewnienia Tobie wygody podczas przeglądania stron serwisu.
+          <div style="display:inline-block;">
+            <%= button_to 'Zamknij', cookies_deploy_path, remote: true, class: "button button-default", style: 'text-align: right'  %>
+          </div>
+        </div>
+
+    <% end %>
+
     <script>
 
         <% flash.each do |key, value| %>
