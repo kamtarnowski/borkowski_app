@@ -12,13 +12,11 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery.turbolinks
 //= require jquery.validate
 //= require jquery.validate.additional-methods
 //= require jquery.validate.localization/messages_pl
 //= require owl.carousel
 //= require gritter
-//= require turbolinks
 //= require underscore
 //= require gmaps/google
 //= require blueimp-gallery-all
