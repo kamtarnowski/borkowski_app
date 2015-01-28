@@ -54,7 +54,4 @@ $(document).ready(function(){
         handler.fitMapToBounds();
         handler.getMap().setZoom(18);
     });
-    $(".fa-facebook-square").on("swiperight",function(){
-        $('#facebook-container').animate({ right: '-310px' });
-    });
 });
