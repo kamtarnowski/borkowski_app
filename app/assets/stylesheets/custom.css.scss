@@ -162,6 +162,10 @@ body {
   padding-bottom: 8px;
   padding-top: 8px;
   text-align: center;
+  transition: border-color 2s;
+  &:hover {
+    border: orange solid 2px;
+  }
 }
 
 .htitle {
