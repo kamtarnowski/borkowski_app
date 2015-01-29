@@ -46,26 +46,6 @@
         <%= add_gritter(value, flash[key], :image => :notice, :title => 'Komunikat:', nodom_wrap: true) %>
         <% end %>
 
-        window.fbAsyncInit = function() {
-            FB.init({
-                appId      : '708808135883180',
-                xfbml      : true,
-                version    : 'v2.2'
-            });
-        };
-
-        (function(d, s, id){
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) {return;}
-            js = d.createElement(s); js.id = id;
-            js.src = "//connect.facebook.net/pl_PL/sdk.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-
-        $(".fa-facebook-square").on("swiperight",function(){
-            $('#facebook-container').animate({ right: '-310px' });
-        });
-
     </script>
 
 </body>
