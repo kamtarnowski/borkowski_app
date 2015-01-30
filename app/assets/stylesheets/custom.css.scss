@@ -325,3 +325,9 @@ h4 {
   background-color: rgba(white, .5);
   border-radius: 5px;
 }
+
+.black-shadow {
+  box-shadow: 10px 10px 5px #888888;
+  -webkit-box-shadow: 10px 10px 5px #888888;
+  -moz-box-shadow: 10px 10px 5px #888888;
+}
