@@ -89,8 +89,8 @@
                       <h5>
 
                         <%= link_to CompanyDatum.find(1).email.html_safe, 'mailto:' + CompanyDatum.find(1).email, style: 'text-decoration:none; color:#C1C1C1' %> <br><br>
-                        <%= CompanyDatum.find(1).mob_phone %><br>
-                        <%= CompanyDatum.find(1).phone %><br>
+                        <%= CompanyDatum.find(1).mob_phone.html_safe %><br>
+                        <%= CompanyDatum.find(1).phone.html_safe %><br>
 
                       </h5>
                     </address>
