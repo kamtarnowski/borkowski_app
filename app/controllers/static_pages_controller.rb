@@ -6,7 +6,7 @@ class StaticPagesController < ApplicationController
   end
 
   def event_cookies
-    cookies[:maintain_borkowski]= 'TRUE'
+    cookies[:maintain_borkowski]= { value: 'TRUE', expires: 2.year.from_now }
   end
 
 end
