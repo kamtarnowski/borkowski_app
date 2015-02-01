@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { :host => 'https://powerful-ocean-5826.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'http://borkowski-wylewki-tynki.pl' }
   Paperclip::Attachment.default_options[:s3_host_name] = 's3.eu-central-1.amazonaws.com'
   # Settings specified here will take precedence over those in config/application.rb.
 
