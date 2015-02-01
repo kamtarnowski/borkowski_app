@@ -13,7 +13,7 @@
 
           <div class="form-inputs">
             <%= f.input :email, required: true, autofocus: true %>
-            <%= f.input :name, label: 'Imię i nazwisko', required: true %>
+            <%= f.input :name, label: 'Imię', required: true %>
             <%= f.input :password, required: true, label: 'Hasło', hint: ("#{@minimum_password_length} minimum znaków" if @validatable) %>
             <%= f.input :password_confirmation, label: 'Potwierdź hasło', required: true %>
           </div>
