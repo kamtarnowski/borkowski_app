@@ -1,4 +1,4 @@
-Sitemap: http://borkowski-wylewki-tynki.pl/sitemap.xml.gz'
+Sitemap: http://borkowski-wylewki-tynki.pl/sitemap.xml.gz
 
 User-agent: *
 Allow: /
