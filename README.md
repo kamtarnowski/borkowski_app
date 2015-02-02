@@ -10,6 +10,5 @@ password: password)
 - authored graphic, CSS, layout  
 - S3 AWS images hosting  
 - Website uploaded on Heroku | Cloud Application Platform  
-- meta tags
+- meta tags  
 - and other.
-
